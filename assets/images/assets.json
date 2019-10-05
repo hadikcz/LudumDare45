@@ -1,0 +1,356 @@
+{
+	"textures": [
+		{
+			"image": "assets.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 506,
+				"h": 312
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Mill wheel",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 224,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 224,
+						"h": 224
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 224,
+						"h": 224
+					}
+				},
+				{
+					"filename": "Ground",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 504,
+						"h": 65
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 504,
+						"h": 65
+					},
+					"frame": {
+						"x": 1,
+						"y": 227,
+						"w": 504,
+						"h": 65
+					}
+				},
+				{
+					"filename": "Mill",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 131,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 131,
+						"h": 200
+					},
+					"frame": {
+						"x": 227,
+						"y": 1,
+						"w": 131,
+						"h": 200
+					}
+				},
+				{
+					"filename": "Bakery",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 81
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 81
+					},
+					"frame": {
+						"x": 360,
+						"y": 1,
+						"w": 80,
+						"h": 81
+					}
+				},
+				{
+					"filename": "Scythe",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 49,
+						"h": 40
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 49,
+						"h": 40
+					},
+					"frame": {
+						"x": 360,
+						"y": 84,
+						"w": 49,
+						"h": 40
+					}
+				},
+				{
+					"filename": "Character",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 22,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 22,
+						"h": 52
+					},
+					"frame": {
+						"x": 411,
+						"y": 84,
+						"w": 22,
+						"h": 52
+					}
+				},
+				{
+					"filename": "well",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 43,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 43,
+						"h": 51
+					},
+					"frame": {
+						"x": 360,
+						"y": 126,
+						"w": 43,
+						"h": 51
+					}
+				},
+				{
+					"filename": "bakery table",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 42,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 42,
+						"h": 20
+					},
+					"frame": {
+						"x": 405,
+						"y": 138,
+						"w": 42,
+						"h": 20
+					}
+				},
+				{
+					"filename": "coin",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 39,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 39,
+						"h": 11
+					},
+					"frame": {
+						"x": 435,
+						"y": 84,
+						"w": 39,
+						"h": 11
+					}
+				},
+				{
+					"filename": "bread",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 37,
+						"h": 4
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 37,
+						"h": 4
+					},
+					"frame": {
+						"x": 435,
+						"y": 97,
+						"w": 37,
+						"h": 4
+					}
+				},
+				{
+					"filename": "Grain",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 41
+					},
+					"frame": {
+						"x": 442,
+						"y": 1,
+						"w": 27,
+						"h": 41
+					}
+				},
+				{
+					"filename": "bakery tool",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 43
+					},
+					"frame": {
+						"x": 471,
+						"y": 1,
+						"w": 11,
+						"h": 43
+					}
+				},
+				{
+					"filename": "Bucket",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 1024,
+						"h": 640
+					},
+					"spriteSourceSize": {
+						"x": 495,
+						"y": 520,
+						"w": 9,
+						"h": 15
+					},
+					"frame": {
+						"x": 442,
+						"y": 44,
+						"w": 9,
+						"h": 15
+					}
+				},
+				{
+					"filename": "Crops",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 1024,
+						"h": 640
+					},
+					"spriteSourceSize": {
+						"x": 341,
+						"y": 544,
+						"w": 26,
+						"h": 14
+					},
+					"frame": {
+						"x": 453,
+						"y": 46,
+						"w": 26,
+						"h": 14
+					}
+				},
+				{
+					"filename": "flour",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 22,
+						"h": 13
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 22,
+						"h": 13
+					},
+					"frame": {
+						"x": 442,
+						"y": 62,
+						"w": 22,
+						"h": 13
+					}
+				},
+				{
+					"filename": "Grass",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 504,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 504,
+						"h": 17
+					},
+					"frame": {
+						"x": 1,
+						"y": 294,
+						"w": 504,
+						"h": 17
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:e239e8cf58b519acfda661efa8b0e259:006d41df803c90ec6396cb5e0f13295f:a759b6bbc8381ac9c472b28f589ad0d6$"
+	}
+}
