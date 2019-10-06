@@ -110,6 +110,7 @@ export default class GameEnvironment {
         this._buildingsAndItems.getChildren().forEach((subject) => {
             let distance = Phaser.Math.Distance.Between(subject.x, subject.y, target.x, target.y);
             if (distance < GameConfig.MinimalInteractiveDistance && distance < nearestDistance) {
+                if (subject._name === 'Field' && subject.isOccupied) return;
                 nearest = subject;
                 nearestDistance = distance;
             }

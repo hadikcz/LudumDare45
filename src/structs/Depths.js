@@ -13,6 +13,7 @@ export default {
     SCYTHE: 1420,
     MILL_WHEEL: 1500,
     GRASS: 8000,
+    FIELD: 8500,
     PLAYER_OVERHEAD_TEXT: 9000,
     UI: 10000
 };

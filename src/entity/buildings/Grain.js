@@ -26,6 +26,11 @@ export default class Grain extends Phaser.GameObjects.Image {
          */
         this._timeEventWaitForWater = null;
 
+        /**
+         * @type {Field}
+         */
+        this.field = null;
+
         // this.scene.add.image(this.x, this.y - 100, 'assets', 'progress_bar_inner');
 
         /**
@@ -55,6 +60,10 @@ export default class Grain extends Phaser.GameObjects.Image {
 
     preUpdate () {
         // this.healthbar.preUpdate();
+    }
+
+    setField (field) {
+        this.field = field;
     }
 
     _stateStartGrowing () {
@@ -148,6 +157,7 @@ export default class Grain extends Phaser.GameObjects.Image {
     }
 
     destroy () {
+        this.field.clean();
         this.healthbar.destroy();
         super.destroy();
     }
