@@ -4,6 +4,7 @@ import Depths from 'structs/Depths';
 import WellBuilding from 'entity/WellBuilding';
 import BakeryBuilding from 'entity/BakeryBuilding';
 import Grain from 'entity/Grain';
+import MillBuilding from 'entity/MillBuilding';
 
 export default class GameEnvironment {
     /**
@@ -68,14 +69,13 @@ export default class GameEnvironment {
          */
         this.bakeryBuilding = new BakeryBuilding(this.scene, 500, this.getGroundDimensionY());
 
-        this.scene.add.image(150, this.getGroundDimensionY(), 'assets', 'Mill').setOrigin(0.5, 1);
-        this.millWheel = this.scene.add.image(150, this.getGroundDimensionY() - 135, 'assets', 'Mill wheel');
+        this.millBuilding = new MillBuilding(this.scene, 150, this.getGroundDimensionY());
 
         this.grain = new Grain(this.scene, 340, this.getGroundDimensionY());
     }
 
     update () {
-        this.millWheel.rotation -= 0.01;
+        this.millBuilding.update();
     }
 
     getGroundDimensionY () {
