@@ -46,8 +46,15 @@ export default class GameEnvironment {
          * @type {Phaser.GameObjects.Group}
          * @private
          */
+        this._bgStatic = this.scene.add.group();
+
+        /**
+         * @type {Phaser.GameObjects.Group}
+         * @private
+         */
         this._grassGroup = this.scene.add.group();
 
+        this._createBgStatic();
         this._createGround();
         this._createGrass();
 
@@ -85,6 +92,16 @@ export default class GameEnvironment {
             ground.body.setImmovable(true);
             ground.body.allowGravity = false;
             this.groundGroup.add(ground);
+        }
+    }
+
+    _createBgStatic () {
+        let y = GameConfig.GameWindowSettings.height - 60;
+        let width = this.scene.textures.getFrame('bgStatic').width;
+        for (let i = -2; i < 7; i++) {
+            let ground = this.scene.add.image(i * width, y, 'bgStatic').setOrigin(0, 1)
+                .setDepth(Depths.BG_STATIC);
+            this._bgStatic.add(ground);
         }
     }
 

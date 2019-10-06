@@ -1,5 +1,6 @@
 export default {
     SKY: 1,
+    BG_STATIC: 49,
     GROUND: 50,
     MILL: 150,
     WELL: 160,
