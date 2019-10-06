@@ -326,6 +326,7 @@
                 <false/>
             </struct>
             <key type="filename">assets/bread.png</key>
+            <key type="filename">assets/breadOnTable.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -380,6 +381,19 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">assets/fire.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,5,20,10</rect>
+                <key>scale9Paddings</key>
+                <rect>10,5,20,10</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">assets/flour.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -417,6 +431,19 @@
                 <rect>16,2,32,4</rect>
                 <key>scale9Paddings</key>
                 <rect>16,2,32,4</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets/waterDroplet.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,6,7,11</rect>
+                <key>scale9Paddings</key>
+                <rect>4,6,7,11</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>

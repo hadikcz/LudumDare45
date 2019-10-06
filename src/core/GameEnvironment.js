@@ -89,6 +89,9 @@ export default class GameEnvironment {
 
         // this.millBuilding = new MillBuilding(this.scene, 150, this.getGroundDimensionY());
         // this._buildingsAndItems.add(this.millBuilding);
+
+        let crop = new HarvestedCrop(this.scene, 150, this.getGroundDimensionY() - 100);
+        this.items.add(crop);
     }
 
     update () {

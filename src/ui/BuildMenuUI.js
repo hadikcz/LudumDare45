@@ -44,7 +44,7 @@ export default class BuildMenuUI {
     }
 
     moveDown () {
-        if (this.pointer > this.selectorRowWrapper.length) return;
+        if (this.pointer > Buildings.list.length - 2) return;
         this.pointer++;
         this._redrawPointer();
     }

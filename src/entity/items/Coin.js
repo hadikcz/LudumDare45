@@ -4,7 +4,7 @@ export default class HarvestedCrop extends AbstractItem {
     constructor (scene, x, y) {
         super(scene, x, y, 'coin1', 'Coin');
         this.body.setCircle(12, 0, -12);
-        this.setScale(3);
+        this.setScale(1.5);
         /**
          * @type {number}
          * @private

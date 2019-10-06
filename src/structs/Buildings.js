@@ -8,12 +8,17 @@ export default {
         {
             id: 2,
             name: 'Mill',
-            price: 15
+            price: 20
         },
         {
             id: 3,
             name: 'Bakery',
-            price: 45
+            price: 50
+        },
+        {
+            id: 4,
+            name: 'Farm',
+            price: 150
         }
     ],
     getBuildingById (id) {

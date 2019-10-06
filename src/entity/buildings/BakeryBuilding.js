@@ -1,4 +1,6 @@
 import Depths from 'structs/Depths';
+import Flour from 'entity/items/Flour';
+import Bread from 'entity/items/Bread';
 
 export default class BakeryBuilding extends Phaser.GameObjects.Container {
     constructor (scene, x, y) {
@@ -33,21 +35,94 @@ export default class BakeryBuilding extends Phaser.GameObjects.Container {
          * @type {Phaser.GameObjects.Image}
          * @private
          */
-        this.breadSprite = this.scene.add.image(tableX, -20, 'assets', 'bread').setOrigin(0.5, 1);
+        this.breadSprite = this.scene.add.image(tableX, -20, 'assets', 'breadOnTable').setOrigin(0.5, 1);
         this.add(this.breadSprite);
+
+        /**
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.flourIcon = this.scene.add.image(0, -100, 'assets', 'flour');
+        this.flourIcon.setAlpha(0);
+        this.add(this.flourIcon);
+
+        /**
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.fireEffect = this.scene.add.image(2, -21, 'assets', 'fire');
+        this.fireEffect.setAlpha(0.5);
+        this.add(this.fireEffect);
 
         /**
          * @type {string}
          * @private
          */
         this._name = 'Bakery';
+
+        /**
+         * @type {number}
+         */
+        this.queue = 0;
+
+        this.loopEvent = this.scene.time.addEvent({
+            delay: 5000,
+            repeat: Infinity,
+            callbackScope: this,
+            callback: this._loop
+        });
+
+        this.scene.tweens.add({
+            targets: this.flourIcon,
+            duration: 500,
+            alpha: 1,
+            yoyo: true,
+            repeat: Infinity
+        });
+
+        this.scene.tweens.add({
+            targets: this.fireEffect,
+            duration: 500,
+            alpha: 1,
+            yoyo: true,
+            repeat: Infinity
+        });
+    }
+
+    preUpdate () {
+        console.log(this.queue);
+        if (this.queue > 0) {
+            this.flourIcon.setVisible(false);
+            this.fireEffect.setVisible(true);
+        } else {
+            this.flourIcon.setVisible(true);
+            this.fireEffect.setVisible(false);
+        }
     }
 
     interact () {
-        console.log('interacting with ' + this._name);
+        if (!this.scene.playerCharacter.pickedItem || this.scene.playerCharacter.pickedItem.getName() !== 'Flour') return;
+
+        let item = this.scene.playerCharacter.pickedItem;
+        this.scene.playerCharacter.putDown(true);
+        item.destroy();
+        this.queue++;
     }
 
     getInteractText () {
         return this._name;
+    }
+
+    _loop () {
+        if (this.queue > 0) {
+            this.queue--;
+            this._flushBread();
+        }
+    }
+
+    _flushBread () {
+        for (let i = 0; i < 1; i++) {
+            let item = new Bread(this.scene, this.x, this.y);
+            item.explode();
+            this.scene.gameEnvironment.items.add(item);
+        }
     }
 }

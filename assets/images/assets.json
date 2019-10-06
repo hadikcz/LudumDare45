@@ -10,27 +10,6 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "Mill wheel",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 224,
-						"h": 224
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 224,
-						"h": 224
-					},
-					"frame": {
-						"x": 1,
-						"y": 1,
-						"w": 224,
-						"h": 224
-					}
-				},
-				{
 					"filename": "Ground",
 					"rotated": false,
 					"trimmed": false,
@@ -46,9 +25,51 @@
 					},
 					"frame": {
 						"x": 1,
-						"y": 227,
+						"y": 1,
 						"w": 504,
 						"h": 65
+					}
+				},
+				{
+					"filename": "Grass",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 504,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 504,
+						"h": 17
+					},
+					"frame": {
+						"x": 1,
+						"y": 68,
+						"w": 504,
+						"h": 17
+					}
+				},
+				{
+					"filename": "Mill wheel",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 224,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 224,
+						"h": 224
+					},
+					"frame": {
+						"x": 1,
+						"y": 87,
+						"w": 224,
+						"h": 224
 					}
 				},
 				{
@@ -67,9 +88,135 @@
 					},
 					"frame": {
 						"x": 227,
-						"y": 1,
+						"y": 87,
 						"w": 131,
 						"h": 200
+					}
+				},
+				{
+					"filename": "bakery table",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 42,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 42,
+						"h": 20
+					},
+					"frame": {
+						"x": 227,
+						"y": 289,
+						"w": 42,
+						"h": 20
+					}
+				},
+				{
+					"filename": "fire",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 20
+					},
+					"frame": {
+						"x": 271,
+						"y": 289,
+						"w": 40,
+						"h": 20
+					}
+				},
+				{
+					"filename": "flour",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 22,
+						"h": 13
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 22,
+						"h": 13
+					},
+					"frame": {
+						"x": 313,
+						"y": 289,
+						"w": 22,
+						"h": 13
+					}
+				},
+				{
+					"filename": "breadOnTable",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 37,
+						"h": 4
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 37,
+						"h": 4
+					},
+					"frame": {
+						"x": 313,
+						"y": 304,
+						"w": 37,
+						"h": 4
+					}
+				},
+				{
+					"filename": "Crops",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 12
+					},
+					"frame": {
+						"x": 337,
+						"y": 289,
+						"w": 24,
+						"h": 12
+					}
+				},
+				{
+					"filename": "progress_bar_bg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 4
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 4
+					},
+					"frame": {
+						"x": 352,
+						"y": 303,
+						"w": 32,
+						"h": 4
 					}
 				},
 				{
@@ -87,31 +234,31 @@
 						"h": 81
 					},
 					"frame": {
-						"x": 360,
-						"y": 1,
+						"x": 386,
+						"y": 87,
 						"w": 80,
 						"h": 81
 					}
 				},
 				{
-					"filename": "Scythe",
+					"filename": "bread",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 49,
-						"h": 40
+						"w": 21,
+						"h": 12
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 49,
-						"h": 40
+						"w": 21,
+						"h": 12
 					},
 					"frame": {
-						"x": 360,
-						"y": 84,
-						"w": 49,
-						"h": 40
+						"x": 363,
+						"y": 87,
+						"w": 21,
+						"h": 12
 					}
 				},
 				{
@@ -129,8 +276,8 @@
 						"h": 59
 					},
 					"frame": {
-						"x": 411,
-						"y": 84,
+						"x": 360,
+						"y": 101,
 						"w": 22,
 						"h": 59
 					}
@@ -151,9 +298,114 @@
 					},
 					"frame": {
 						"x": 360,
-						"y": 126,
+						"y": 162,
 						"w": 22,
 						"h": 52
+					}
+				},
+				{
+					"filename": "progress_bar_inner",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 4
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 4
+					},
+					"frame": {
+						"x": 468,
+						"y": 87,
+						"w": 32,
+						"h": 4
+					}
+				},
+				{
+					"filename": "Grain",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 41
+					},
+					"frame": {
+						"x": 468,
+						"y": 93,
+						"w": 27,
+						"h": 41
+					}
+				},
+				{
+					"filename": "coin3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 8,
+						"h": 11
+					},
+					"frame": {
+						"x": 497,
+						"y": 93,
+						"w": 8,
+						"h": 11
+					}
+				},
+				{
+					"filename": "coin4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 5,
+						"h": 11
+					},
+					"frame": {
+						"x": 497,
+						"y": 106,
+						"w": 5,
+						"h": 11
+					}
+				},
+				{
+					"filename": "well",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 43,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 43,
+						"h": 51
+					},
+					"frame": {
+						"x": 360,
+						"y": 216,
+						"w": 43,
+						"h": 51
 					}
 				},
 				{
@@ -172,93 +424,72 @@
 					},
 					"frame": {
 						"x": 384,
-						"y": 126,
+						"y": 170,
 						"w": 11,
 						"h": 43
 					}
 				},
 				{
-					"filename": "well",
+					"filename": "Scythe",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 43,
-						"h": 51
+						"w": 49,
+						"h": 40
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 43,
-						"h": 51
+						"w": 49,
+						"h": 40
+					},
+					"frame": {
+						"x": 386,
+						"y": 269,
+						"w": 49,
+						"h": 40
+					}
+				},
+				{
+					"filename": "Bucket",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 26
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 26
+					},
+					"frame": {
+						"x": 363,
+						"y": 269,
+						"w": 14,
+						"h": 26
+					}
+				},
+				{
+					"filename": "waterDroplet",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 23
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 23
 					},
 					"frame": {
 						"x": 397,
-						"y": 145,
-						"w": 43,
-						"h": 51
-					}
-				},
-				{
-					"filename": "coin1",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 11,
-						"h": 11
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 11,
-						"h": 11
-					},
-					"frame": {
-						"x": 397,
-						"y": 126,
-						"w": 11,
-						"h": 11
-					}
-				},
-				{
-					"filename": "Grain",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 27,
-						"h": 41
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 27,
-						"h": 41
-					},
-					"frame": {
-						"x": 360,
-						"y": 180,
-						"w": 27,
-						"h": 41
-					}
-				},
-				{
-					"filename": "bakery table",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 42,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 42,
-						"h": 20
-					},
-					"frame": {
-						"x": 435,
-						"y": 84,
-						"w": 42,
-						"h": 20
+						"y": 170,
+						"w": 14,
+						"h": 23
 					}
 				},
 				{
@@ -276,8 +507,8 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 435,
-						"y": 106,
+						"x": 397,
+						"y": 195,
 						"w": 40,
 						"h": 11
 					}
@@ -297,178 +528,31 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 435,
-						"y": 119,
+						"x": 413,
+						"y": 170,
 						"w": 39,
 						"h": 11
 					}
 				},
 				{
-					"filename": "bread",
+					"filename": "coin1",
 					"rotated": false,
 					"trimmed": false,
-					"sourceSize": {
-						"w": 37,
-						"h": 4
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 37,
-						"h": 4
-					},
-					"frame": {
-						"x": 435,
-						"y": 132,
-						"w": 37,
-						"h": 4
-					}
-				},
-				{
-					"filename": "coin4",
-					"rotated": false,
-					"trimmed": true,
 					"sourceSize": {
 						"w": 11,
 						"h": 11
 					},
 					"spriteSourceSize": {
-						"x": 3,
+						"x": 0,
 						"y": 0,
-						"w": 5,
+						"w": 11,
 						"h": 11
-					},
-					"frame": {
-						"x": 389,
-						"y": 171,
-						"w": 5,
-						"h": 11
-					}
-				},
-				{
-					"filename": "progress_bar_bg",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 32,
-						"h": 4
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 32,
-						"h": 4
-					},
-					"frame": {
-						"x": 435,
-						"y": 138,
-						"w": 32,
-						"h": 4
-					}
-				},
-				{
-					"filename": "Bucket",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 14,
-						"h": 26
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 14,
-						"h": 26
-					},
-					"frame": {
-						"x": 442,
-						"y": 1,
-						"w": 14,
-						"h": 26
-					}
-				},
-				{
-					"filename": "Crops",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 24,
-						"h": 12
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 24,
-						"h": 12
-					},
-					"frame": {
-						"x": 442,
-						"y": 29,
-						"w": 24,
-						"h": 12
-					}
-				},
-				{
-					"filename": "progress_bar_inner",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 32,
-						"h": 4
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 32,
-						"h": 4
-					},
-					"frame": {
-						"x": 458,
-						"y": 1,
-						"w": 32,
-						"h": 4
-					}
-				},
-				{
-					"filename": "flour",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 22,
-						"h": 13
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 22,
-						"h": 13
-					},
-					"frame": {
-						"x": 458,
-						"y": 7,
-						"w": 22,
-						"h": 13
-					}
-				},
-				{
-					"filename": "waterDroplet",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 14,
-						"h": 23
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 14,
-						"h": 23
 					},
 					"frame": {
 						"x": 468,
-						"y": 22,
-						"w": 14,
-						"h": 23
+						"y": 136,
+						"w": 11,
+						"h": 11
 					}
 				},
 				{
@@ -486,52 +570,10 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 482,
-						"y": 7,
+						"x": 481,
+						"y": 136,
 						"w": 11,
 						"h": 11
-					}
-				},
-				{
-					"filename": "coin3",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 11,
-						"h": 11
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 0,
-						"w": 8,
-						"h": 11
-					},
-					"frame": {
-						"x": 442,
-						"y": 43,
-						"w": 8,
-						"h": 11
-					}
-				},
-				{
-					"filename": "Grass",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 504,
-						"h": 17
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 504,
-						"h": 17
-					},
-					"frame": {
-						"x": 1,
-						"y": 294,
-						"w": 504,
-						"h": 17
 					}
 				}
 			]
@@ -540,6 +582,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:b8ba6b25d267c355d2ccd609bed203b6:6e6b10e20344a280bc0ae133945a4e48:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:6a3711ab2a917660e164c52c91a3382e:6008656fcc2342ae617ef99f37a2465d:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }
