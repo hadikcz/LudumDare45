@@ -78,15 +78,15 @@ export default class GameEnvironment {
         this.merchant = new Merchant(this.scene, 500, this.getGroundDimensionY());
         this._buildingsAndItems.add(this.merchant);
 
-        let item = new Flour(this.scene, 300, this.getGroundDimensionY() - 200);
-        this.items.add(item);
-
-        item = new Flour(this.scene, 300, this.getGroundDimensionY() - 200);
-        this.items.add(item);
-        item = new Flour(this.scene, 300, this.getGroundDimensionY() - 200);
-        this.items.add(item);
-        item = new Flour(this.scene, 300, this.getGroundDimensionY() - 200);
-        this.items.add(item);
+        // let item = new Flour(this.scene, 300, this.getGroundDimensionY() - 200);
+        // this.items.add(item);
+        //
+        // item = new Flour(this.scene, 300, this.getGroundDimensionY() - 200);
+        // this.items.add(item);
+        // item = new Flour(this.scene, 300, this.getGroundDimensionY() - 200);
+        // this.items.add(item);
+        // item = new Flour(this.scene, 300, this.getGroundDimensionY() - 200);
+        // this.items.add(item);
     }
 
     update () {
@@ -97,8 +97,10 @@ export default class GameEnvironment {
     }
 
     findNearestInteractiveItem (target) {
-        let item = this._findNearestInteractiveItem(target);
-        if (item) return item;
+        if (!this.scene.playerCharacter.pickedItem) {
+            let item = this._findNearestInteractiveItem(target);
+            if (item) return item;
+        }
         return this._findNearestInteractiveItemBuilding(target);
     }
 

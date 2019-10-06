@@ -13,6 +13,6 @@ export default {
     MillLoop: 10000,
     BakeryLoop: 20000,
     MinimalInteractiveDistance: 75,
-    MinimalInteractiveDistanceItem: 50,
+    MinimalInteractiveDistanceItem: 65,
     DefaultOverHeadText: 'Place/build'
 };
