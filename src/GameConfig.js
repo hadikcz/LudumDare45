@@ -9,5 +9,6 @@ export default {
         height: 640 * 2,
         offsetX: 0,
         offsetY: 0
-    }
+    },
+    MinimalInteractiveDistance: 75
 };

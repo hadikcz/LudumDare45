@@ -36,4 +36,8 @@ export default class BakeryBuilding extends Phaser.GameObjects.Container {
         this.breadSprite = this.scene.add.image(tableX, -20, 'assets', 'bread').setOrigin(0.5, 1);
         this.add(this.breadSprite);
     }
+
+    getInteractText () {
+        return 'Bakery';
+    }
 }

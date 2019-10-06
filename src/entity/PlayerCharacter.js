@@ -33,7 +33,7 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
          * @type {Phaser.GameObjects.Image}
          * @private
          */
-        this.characterImage = this.scene.add.image(0, 0, 'assets', 'Character').setOrigin(0.5, 0);
+        this.characterImage = this.scene.add.image(0, 0, 'assets', 'Character').setOrigin(0, 0);
         this.add(this.characterImage);
 
         /**
@@ -43,14 +43,35 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
         this.scythe = this.scene.add.image(14, 24, 'assets', 'Scythe');//.setScale(1, -1);
         this.add(this.scythe);
 
+        /**
+         * @type {null}
+         * @private
+         */
+        this._nearestInteractiveItem = null;
+
         this.body.setBounce(0.2);
         this.body.setCollideWorldBounds(true);
 
         this.body.setSize(22, 52);
+
+        this._overHeadText = this.scene.add.text(this.x, this.y, '', { fontFamily: 'Verdana, Arial', fontSize: 45, color: '#FFFFFF' }); // '#FF0000'
+        this._overHeadText.setOrigin(0.25, 2);
+        this._overHeadText.setDepth(Depths.PLAYER_OVERHEAD_TEXT);
+        this._overHeadText.setScale(0.25, 0.25);
     }
 
-    update () {
+    preUpdate () {
         this.controls.update();
+
+        let nearestInteractiveItem = this.scene.gameEnvironment.findNearestInteractiveItem(this);
+        if (nearestInteractiveItem) {
+            this._nearestInteractiveItem = nearestInteractiveItem;
+            this._overHeadText.setText(this._nearestInteractiveItem.getInteractText());
+        } else {
+            this._nearestInteractiveItem = null;
+            this._overHeadText.setText('');
+        }
+        this._overHeadText.setPosition(this.x, this.y);
     }
 
     /**
@@ -59,11 +80,11 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
      */
     moveTo (direction) {
         if (direction === 'left') {
-            this.setScale(-1, 1);
+            this.characterImage.setScale(-1, 1).setOrigin(1, 0);
             this.body.setVelocityX(-this._movementSpeed);
         } else if (direction === 'right') {
             this.body.setVelocityX(this._movementSpeed);
-            this.setScale(1, 1);
+            this.characterImage.setScale(1, 1).setOrigin(0, 0);
         }
 
         if (direction === 'jump' && this.body.touching.down) {

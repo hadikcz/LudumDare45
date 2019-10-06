@@ -25,4 +25,8 @@ export default class MillBuilding extends Phaser.GameObjects.Container {
     update () {
         this.millWheel.rotation -= 0.01;
     }
+
+    getInteractText () {
+        return 'Mill';
+    }
 }

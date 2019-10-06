@@ -55,6 +55,12 @@ export default class GameEnvironment {
          */
         this._grassGroup = this.scene.add.group();
 
+        /**
+         * @type {Phaser.GameObjects.Group}
+         * @private
+         */
+        this._buildingsAndItems = this.scene.add.group();
+
         this._createBgStatic();
         this._createGround();
         this._createGrass();
@@ -63,15 +69,19 @@ export default class GameEnvironment {
          * @type {WellBuilding}
          */
         this.wellBuilding = new WellBuilding(this.scene, 300, this.getGroundDimensionY());
+        this._buildingsAndItems.add(this.wellBuilding);
 
         /**
          * @type {WellBuilding}
          */
         this.bakeryBuilding = new BakeryBuilding(this.scene, 500, this.getGroundDimensionY());
+        this._buildingsAndItems.add(this.bakeryBuilding);
 
         this.millBuilding = new MillBuilding(this.scene, 150, this.getGroundDimensionY());
+        this._buildingsAndItems.add(this.millBuilding);
 
         this.grain = new Grain(this.scene, 340, this.getGroundDimensionY());
+        this._buildingsAndItems.add(this.grain);
     }
 
     update () {
@@ -80,6 +90,20 @@ export default class GameEnvironment {
 
     getGroundDimensionY () {
         return GameConfig.GameWindowSettings.height - this.scene.textures.getFrame('assets', 'Ground').height + 2;
+    }
+
+    findNearestInteractiveItem (target) {
+        let nearest = null;
+        let nearestDistance = Infinity;
+        this._buildingsAndItems.getChildren().forEach((subject) => {
+            let distance = Phaser.Math.Distance.Between(subject.x, subject.y, target.x, target.y);
+            console.log(distance);
+            if (distance < GameConfig.MinimalInteractiveDistance && distance < nearestDistance) {
+                nearest = subject;
+                nearestDistance = distance;
+            }
+        });
+        return nearest;
     }
 
     _createGround () {

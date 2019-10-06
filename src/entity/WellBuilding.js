@@ -8,4 +8,8 @@ export default class WellBuilding extends Phaser.GameObjects.Image {
         this.setOrigin(0.5, 1);
         this.setDepth(Depths.WELL);
     }
+
+    getInteractText () {
+        return 'Well';
+    }
 }

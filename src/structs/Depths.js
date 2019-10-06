@@ -8,6 +8,7 @@ export default {
     PLAYER: 1000,
     GRAIN: 1200,
     MILL_WHEEL: 1500,
-    GRASS: 10000,
+    GRASS: 8000,
+    PLAYER_OVERHEAD_TEXT: 9000,
     UI: 10000
 };
