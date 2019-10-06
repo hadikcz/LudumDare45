@@ -32,10 +32,10 @@ export default class AbstractItem extends Phaser.GameObjects.Sprite {
 
     explode (initY = false) {
         if (!initY) {
-            initY = Phaser.Math.RND.integerInRange(-400, -150);
+            initY = Phaser.Math.RND.integerInRange(-250, -150);
         }
         this.body.setVelocity(
-            Phaser.Math.RND.integerInRange(-60, 60),
+            Phaser.Math.RND.integerInRange(-80, 80),
             Phaser.Math.RND.integerInRange(initY - 50, initY + 50)
         );
 

@@ -33,22 +33,17 @@ export default class WellBuilding extends Phaser.GameObjects.Image {
 
     _sell (item) {
         let price = item.getPrice();
-        console.log('try sell xxx ' + price);
         if (price && price > 0) {
-            console.log('item was sold for ' + price);
-            // spawn coins
             this._spawnCoins(price);
-            // remove item from players
             this.scene.playerCharacter.putDown(true);
             item.destroy();
         }
     }
 
     _spawnCoins (count) {
-        let initY = Phaser.Math.RND.integerInRange(-400, -300);
         for (let i = 0; i < count; i++) {
             let coin = new Coin(this.scene, this.x, this.y);
-            coin.explode(initY);
+            coin.explode();
             this.scene.gameEnvironment.items.add(coin);
         }
     }

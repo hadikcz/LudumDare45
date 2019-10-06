@@ -14,7 +14,7 @@ export default class HarvestedCrop extends AbstractItem {
 
     explode (initY = false) {
         if (!initY) {
-            initY = Phaser.Math.RND.integerInRange(-400, -150);
+            initY = Phaser.Math.RND.integerInRange(-250, -150);
         }
         this.body.setVelocity(
             Phaser.Math.RND.integerInRange(-60, 60),
