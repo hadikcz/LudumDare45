@@ -367,24 +367,24 @@
 					}
 				},
 				{
-					"filename": "flour",
+					"filename": "waterDroplet",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 22,
-						"h": 13
+						"w": 14,
+						"h": 23
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 22,
-						"h": 13
+						"w": 14,
+						"h": 23
 					},
 					"frame": {
 						"x": 442,
 						"y": 1,
-						"w": 22,
-						"h": 13
+						"w": 14,
+						"h": 23
 					}
 				},
 				{
@@ -403,7 +403,7 @@
 					},
 					"frame": {
 						"x": 442,
-						"y": 16,
+						"y": 26,
 						"w": 24,
 						"h": 12
 					}
@@ -423,10 +423,31 @@
 						"h": 4
 					},
 					"frame": {
-						"x": 466,
+						"x": 458,
 						"y": 1,
 						"w": 32,
 						"h": 4
+					}
+				},
+				{
+					"filename": "flour",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 22,
+						"h": 13
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 22,
+						"h": 13
+					},
+					"frame": {
+						"x": 458,
+						"y": 7,
+						"w": 22,
+						"h": 13
 					}
 				},
 				{
@@ -444,8 +465,8 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 442,
-						"y": 30,
+						"x": 468,
+						"y": 22,
 						"w": 11,
 						"h": 11
 					}
@@ -465,8 +486,8 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 455,
-						"y": 30,
+						"x": 468,
+						"y": 35,
 						"w": 11,
 						"h": 11
 					}
@@ -487,7 +508,7 @@
 					},
 					"frame": {
 						"x": 442,
-						"y": 43,
+						"y": 40,
 						"w": 8,
 						"h": 11
 					}
@@ -519,6 +540,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:64a1d353a64787a531c011ce8a107a3a:23317d57d6026bb88e4bd16454b1b71b:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:efff815518156c1d4eb845ef62f5eda3:1840e748149240e2e07f7d44bf4a6c2b:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }

@@ -13,7 +13,7 @@ export default class Grain extends Phaser.GameObjects.Image {
          * @type {string}
          * @private
          */
-        this._name = 'Grain';
+        this._name = 'Wheat';
 
         /**
          * @type {string}
@@ -30,6 +30,20 @@ export default class Grain extends Phaser.GameObjects.Image {
          * @type {Field}
          */
         this.field = null;
+
+        /**
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.waterDropletImage = this.scene.add.image(this.x, this.y - 90, 'assets', 'waterDroplet');
+        this.waterDropletImage.setAlpha(0);
+
+        /**
+         * @type {Phaser.GameObjects.Image}
+         */
+        this.scytheImage = this.scene.add.image(this.x, this.y - 90, 'assets', 'Scythe');
+        this.scytheImage
+            .setAlpha(0)
+            .setScale(0.5);
 
         // this.scene.add.image(this.x, this.y - 100, 'assets', 'progress_bar_inner');
 
@@ -102,6 +116,25 @@ export default class Grain extends Phaser.GameObjects.Image {
             callbackScope: this,
             callback: this._die
         });
+
+        this.scene.tweens.add({
+            targets: this.waterDropletImage,
+            duration: 500,
+            alpha: 1,
+            yoyo: true,
+            repeat: Infinity
+        });
+
+        let percent = 100;
+        let tick = 10;
+        this.waterBeforeDieInterval = setInterval(() => {
+            let value = 100 / (BuildingStatesTiming.GRAIN.GROWED_WAITING_FOR_WATER / tick);
+            percent -= value;
+            this.healthbar.setPercent(percent);
+            if (percent <= 0) {
+                clearInterval(this.waterBeforeDieInterval);
+            }
+        }, tick);
     }
 
     interact () {
@@ -109,14 +142,58 @@ export default class Grain extends Phaser.GameObjects.Image {
             this._interactWaterThePlant();
         } else if (this.state === BuildingsAndItemsStates.GRAIN.GROWED /* && this.scene.playerCharacter.activeItem === 'scythe' */) {
             this._interactHarvest();
+        } else if (this.state === BuildingsAndItemsStates.GRAIN.DEAD) {
+            this.destroy();
         }
     }
 
     _interactWaterThePlant () {
         if (this.state !== BuildingsAndItemsStates.GRAIN.GROWED_WAITING_FOR_WATER) return;
 
+        this.waterDropletImage.destroy();
+        clearInterval(this.waterBeforeDieInterval);
+
         this._timeEventWaitForWater.destroy();
+        this.state = BuildingsAndItemsStates.GRAIN.WAIT_BEFORE_ITS_READY_TO_TAKE_AFTER_WATER;
+
+        let percent = 0;
+        let tick = 10;
+        let interval = setInterval(() => {
+            let value = 100 / (BuildingStatesTiming.GRAIN.WAIT_BEFORE_ITS_READY_TO_TAKE_AFTER_WATER / tick);
+            percent += value;
+            this.healthbar.setPercent(percent);
+            if (percent >= 100) {
+                clearInterval(interval);
+            }
+        }, tick);
+
+        this._timeEventWaitForPickUp = this.scene.time.addEvent({
+            delay: BuildingStatesTiming.GRAIN.WAIT_BEFORE_ITS_READY_TO_TAKE_AFTER_WATER,
+            callbackScope: this,
+            callback: this._waitForHarvest
+        });
+    }
+
+    _waitForHarvest () {
         this.state = BuildingsAndItemsStates.GRAIN.GROWED;
+        this.scene.tweens.add({
+            targets: this.scytheImage,
+            duration: 500,
+            alpha: 1,
+            yoyo: true,
+            repeat: Infinity
+        });
+
+        let percent = 100;
+        let tick = 10;
+        let interval = setInterval(() => {
+            let value = 100 / (BuildingStatesTiming.GRAIN.GROWED_WAIT_FOR_DEAD / tick);
+            percent -= value;
+            this.healthbar.setPercent(percent);
+            if (percent <= 0) {
+                clearInterval(interval);
+            }
+        }, tick);
 
         this._timeEventWaitForPickUp = this.scene.time.addEvent({
             delay: BuildingStatesTiming.GRAIN.GROWED_WAIT_FOR_DEAD,
@@ -154,11 +231,14 @@ export default class Grain extends Phaser.GameObjects.Image {
     _die () {
         this.state = BuildingsAndItemsStates.GRAIN.DEAD;
         this.tint = 0xAAAAAA;
+        this.scytheImage.setAlpha(0);
     }
 
     destroy () {
         this.field.clean();
         this.healthbar.destroy();
+        this.scytheImage.destroy();
+        this.waterDropletImage.destroy();
         super.destroy();
     }
 }
