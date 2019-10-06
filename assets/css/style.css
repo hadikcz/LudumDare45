@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "AldotheApache";
-    src: url('../fonts/AldotheApache.ttf') format("truetype");
+    font-family: "ARCADECLASSIC";
+    src: url('../fonts/ARCADECLASSIC.ttf') format("truetype");
 }
 html,
 body {
@@ -15,7 +15,7 @@ body {
     image-rendering: crisp-edges;                /* Possible future browsers. */
     -ms-interpolation-mode: nearest-neighbor;    /* IE (non standard naming) */
     image-rendering: pixelated;                  /* Chrome 41 */
-    font-family: 'AldotheApache', Arial;
+    font-family: 'ARCADECLASSIC', Arial;
     background: #FFFFFF;
 }
 #content {
@@ -48,4 +48,6 @@ body {
     color: #ffe33e;
     font-size: 55px;
     display: inline-block;
+    margin-left: 5px;
+    transform: translateY(-5px);
 }
