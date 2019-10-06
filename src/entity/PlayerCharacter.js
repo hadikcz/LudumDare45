@@ -33,7 +33,7 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
          * @type {Phaser.GameObjects.Image}
          * @private
          */
-        this.characterImage = this.scene.add.image(0, 0, 'assets', 'Character').setOrigin(0, 0);
+        this.characterImage = this.scene.add.image(0, 0, 'assets', 'Character').setOrigin(0.5, 0);
         this.add(this.characterImage);
 
         /**
@@ -42,6 +42,11 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
          */
         this.scythe = this.scene.add.image(14, 24, 'assets', 'Scythe');//.setScale(1, -1);
         this.add(this.scythe);
+
+        /**
+         * @type {Phaser.GameObjects.GameObject}
+         */
+        this.pickedItem = null;
 
         /**
          * @type {Phaser.GameObjects.GameObject|null}
@@ -56,10 +61,11 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
 
         this.body.setSize(22, 52);
 
-        this._overHeadText = this.scene.add.text(this.x, this.y, GameConfig.DefaultOverHeadText, { fontFamily: 'Verdana, Arial', fontSize: 45, color: '#FFFFFF' }); // '#FF0000'
-        this._overHeadText.setOrigin(0.25, 2);
+        this._overHeadText = this.scene.add.text(0, 0, GameConfig.DefaultOverHeadText, { fontFamily: 'Verdana, Arial', fontSize: 45, color: '#FFFFFF' }); // '#FF0000'
+        this._overHeadText.setOrigin(0.5, 2);
         this._overHeadText.setDepth(Depths.PLAYER_OVERHEAD_TEXT);
         this._overHeadText.setScale(0.25, 0.25);
+        this.add(this._overHeadText);
     }
 
     /**
@@ -71,7 +77,9 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
 
     preUpdate () {
         this.controls.update();
+    }
 
+    update () {
         let nearestInteractiveItem = this.scene.gameEnvironment.findNearestInteractiveItem(this);
         if (nearestInteractiveItem) {
             this._nearestInteractiveItem = nearestInteractiveItem;
@@ -80,7 +88,10 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
             this._nearestInteractiveItem = null;
             this._overHeadText.setText(GameConfig.DefaultOverHeadText);
         }
-        this._overHeadText.setPosition(this.x, this.y);
+        // this._overHeadText.setPosition(this.x, this.y);
+        if (this.pickedItem) {
+            this.pickedItem.setPosition(this.x, this.y + 10);
+        }
     }
 
     /**
@@ -89,11 +100,14 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
      */
     moveTo (direction) {
         if (direction === 'left') {
-            this.characterImage.setScale(-1, 1).setOrigin(1, 0);
+            this.setScale(-1, 1);
+            this._overHeadText.setScale(-0.25, 0.25);
             this.body.setVelocityX(-this._movementSpeed);
         } else if (direction === 'right') {
             this.body.setVelocityX(this._movementSpeed);
-            this.characterImage.setScale(1, 1).setOrigin(0, 0);
+
+            this._overHeadText.setScale(0.25, 0.25);
+            this.setScale(1, 1);
         }
 
         if (direction === 'jump' && this.body.touching.down) {
@@ -103,5 +117,14 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
         if (direction === 'stopX') {
             this.body.setVelocityX(0);
         }
+    }
+
+    pickUp (item) {
+        this.pickedItem = item;
+    }
+
+    putDown () {
+        this.pickedItem.putDown(this.x, this.y);
+        this.pickedItem = null;
     }
 }

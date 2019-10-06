@@ -2,7 +2,7 @@ import Depths from 'structs/Depths';
 import BuildingsAndItemsStates from 'structs/BuildingsAndItemsStates';
 import BuildingStatesTiming from 'structs/BuildingStatesTiming';
 import ProgressBarUI from 'ui/ProgressBarUI';
-import HarvestedCrop from 'entity/HarvestedCrop';
+import HarvestedCrop from 'entity/items/HarvestedCrop';
 
 export default class Grain extends Phaser.GameObjects.Image {
     constructor (scene, x, y) {
@@ -101,7 +101,6 @@ export default class Grain extends Phaser.GameObjects.Image {
         } else if (this.state === BuildingsAndItemsStates.GRAIN.GROWED /* && this.scene.playerCharacter.activeItem === 'scythe' */) {
             this._interactHarvest();
         }
-        console.log('interacting with ' + this._name);
     }
 
     _interactWaterThePlant () {
@@ -127,7 +126,7 @@ export default class Grain extends Phaser.GameObjects.Image {
         for (let i = 0; i < Phaser.Math.RND.integerInRange(2, 4); i++) {
             let crop = new HarvestedCrop(this.scene, this.x, this.y);
             crop.explode(initY);
-            this.scene.gameEnvironment.crops.add(crop);
+            this.scene.gameEnvironment.items.add(crop);
         }
         this.destroy(true);
     }

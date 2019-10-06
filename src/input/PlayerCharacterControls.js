@@ -25,8 +25,8 @@ export default class PlayerCharacterControls {
             left2: this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A),
             right: this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT),
             right2: this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D),
-            action: this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE),
-            action2: this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E)
+            action: this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E),
+            dropItem: this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Q)
         };
     }
 
@@ -46,6 +46,10 @@ export default class PlayerCharacterControls {
         }
         if (!click) {
             this.playerCharacter.moveTo('stopX');
+        }
+
+        if (Phaser.Input.Keyboard.JustDown(this.keys.dropItem)) {
+            this.playerCharacter.putDown();
         }
     }
 }

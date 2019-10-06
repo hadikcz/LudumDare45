@@ -8,6 +8,8 @@ export default {
     PLAYER: 1000,
     GRAIN: 1200,
     CROP: 1400,
+    ITEMS: 1410,
+    SCYTHE: 1420,
     MILL_WHEEL: 1500,
     GRASS: 8000,
     PLAYER_OVERHEAD_TEXT: 9000,

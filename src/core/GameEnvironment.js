@@ -5,7 +5,7 @@ import WellBuilding from 'entity/buildings/WellBuilding';
 import BakeryBuilding from 'entity/buildings/BakeryBuilding';
 import Grain from 'entity/buildings/Grain';
 import MillBuilding from 'entity/buildings/MillBuilding';
-import HarvestedCrop from 'entity/HarvestedCrop';
+import HarvestedCrop from 'entity/items/HarvestedCrop';
 
 export default class GameEnvironment {
     /**
@@ -65,7 +65,7 @@ export default class GameEnvironment {
         /**
          * @type {Phaser.GameObjects.Group}
          */
-        this.crops = this.scene.add.group();
+        this.items = this.scene.add.group();
 
         this._createBgStatic();
         this._createGround();
@@ -99,8 +99,8 @@ export default class GameEnvironment {
     }
 
     findNearestInteractiveItem (target) {
-        let crop = this._findNearestInteractiveCrop(target);
-        if (crop) return crop;
+        let item = this._findNearestInteractiveItem(target);
+        if (item) return item;
         return this._findNearestInteractiveItemBuilding(target);
     }
 
@@ -117,12 +117,12 @@ export default class GameEnvironment {
         return nearest;
     }
 
-    _findNearestInteractiveCrop (target) {
+    _findNearestInteractiveItem (target) {
         let nearest = null;
         let nearestDistance = Infinity;
-        this.crops.getChildren().forEach((subject) => {
+        this.items.getChildren().forEach((subject) => {
             let distance = Phaser.Math.Distance.Between(subject.x, subject.y, target.x, target.y);
-            if (distance < GameConfig.MinimalInteractiveDistanceItem && distance < nearestDistance) {
+            if (distance < GameConfig.MinimalInteractiveDistanceItem && distance < nearestDistance && !subject.isPickedUp()) {
                 nearest = subject;
                 nearestDistance = distance;
             }
