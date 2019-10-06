@@ -20,13 +20,23 @@ export default class MillBuilding extends Phaser.GameObjects.Container {
          */
         this.millWheel = this.scene.add.image(0, -135, 'assets', 'Mill wheel').setDepth(Depths.MILL_WHEEL);
         this.add(this.millWheel);
+
+        /**
+         * @type {string}
+         * @private
+         */
+        this._name = 'Mill';
     }
 
     update () {
         this.millWheel.rotation -= 0.01;
     }
 
+    interact () {
+        console.log('interacting with ' + this._name);
+    }
+
     getInteractText () {
-        return 'Mill';
+        return this._name;
     }
 }

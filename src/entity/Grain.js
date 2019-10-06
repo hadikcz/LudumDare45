@@ -5,11 +5,21 @@ export default class WellBuilding extends Phaser.GameObjects.Image {
         super(scene, x, y, 'assets', 'Grain');
         this.scene.add.existing(this);
 
+        /**
+         * @type {string}
+         * @private
+         */
+        this._name = 'Grain';
+
         this.setOrigin(0.5, 1);
         this.setDepth(Depths.GRAIN);
     }
 
+    interact () {
+        console.log('interacting with ' + this._name);
+    }
+
     getInteractText () {
-        return 'Grain';
+        return this._name;
     }
 }

@@ -44,7 +44,7 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
         this.add(this.scythe);
 
         /**
-         * @type {null}
+         * @type {Phaser.GameObjects.GameObject|null}
          * @private
          */
         this._nearestInteractiveItem = null;
@@ -58,6 +58,13 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
         this._overHeadText.setOrigin(0.25, 2);
         this._overHeadText.setDepth(Depths.PLAYER_OVERHEAD_TEXT);
         this._overHeadText.setScale(0.25, 0.25);
+    }
+
+    /**
+     * @return {Phaser.GameObjects.GameObject}
+     */
+    getNearestInteractiveItem () {
+        return this._nearestInteractiveItem;
     }
 
     preUpdate () {

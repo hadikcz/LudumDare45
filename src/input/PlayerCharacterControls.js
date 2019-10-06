@@ -31,17 +31,6 @@ export default class PlayerCharacterControls {
     }
 
     update () {
-        // if (this.keys.switchCharacter.isDown && !this._lockSwitchCharacter) {
-        //     this._lockSwitchCharacter = true;
-        //     this.scene.events.emit('switchCharacter');
-        //     setTimeout(() => {
-        //         try {
-        //             this._lockSwitchCharacter = false;
-        //         } catch (e) {console.log(e);}
-        //     }, 200);
-        // }
-        // if (this._targetCharacterToControl._lockControlls) return;
-
         let click = false;
         if (this.keys.left.isDown || this.keys.left2.isDown) {
             this.playerCharacter.moveTo('left');
@@ -58,17 +47,5 @@ export default class PlayerCharacterControls {
         if (!click) {
             this.playerCharacter.moveTo('stopX');
         }
-
-        // if (this.keys.action.isDown || this.keys.action2.isDown) {
-        //     if (!this._lockInteract) {
-        //         this.scene.events.emit('interact');
-        //         this._lockInteract = true;
-        //         setTimeout(() => {
-        //             try {
-        //                 this._lockInteract = false;
-        //             } catch (e) {console.log(e);}
-        //         }, 200);
-        //     }
-        // }
     }
 }

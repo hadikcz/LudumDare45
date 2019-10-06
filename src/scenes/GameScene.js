@@ -7,6 +7,8 @@ import UI from './../ui/UI';
 import SoundManager from 'core/SoundManager';
 import GameConfig from 'GameConfig';
 import PlayerCharacter from 'entity/PlayerCharacter';
+import InteractiveControler from 'controlers/InteractiveControler';
+import GameControls from 'input/GameControls';
 
 export default class GameScene extends Phaser.Scene {
     constructor () {
@@ -40,12 +42,17 @@ export default class GameScene extends Phaser.Scene {
         let spawnY = GameConfig.GameWindowSettings.height - this.textures.getFrame('assets', 'Ground').height;
         this.playerCharacter = new PlayerCharacter(this, 300, this.gameEnvironment.getGroundDimensionY() - 60);
 
+        this.interactiveControler = new InteractiveControler(this, this.playerCharacter);
+
         this.ui = new UI(this);
+
+        this.gameControls = new GameControls(this);
 
         this.physics.add.collider(this.playerCharacter, this.gameEnvironment.groundGroup);
     }
 
     update () {
+        this.gameControls.update();
         this.playerCharacter.update();
         this.gameEnvironment.update();
     }

@@ -97,7 +97,6 @@ export default class GameEnvironment {
         let nearestDistance = Infinity;
         this._buildingsAndItems.getChildren().forEach((subject) => {
             let distance = Phaser.Math.Distance.Between(subject.x, subject.y, target.x, target.y);
-            console.log(distance);
             if (distance < GameConfig.MinimalInteractiveDistance && distance < nearestDistance) {
                 nearest = subject;
                 nearestDistance = distance;
