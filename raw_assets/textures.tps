@@ -364,6 +364,20 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">assets/progress_bar_bg.png</key>
+            <key type="filename">assets/progress_bar_inner.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>16,2,32,4</rect>
+                <key>scale9Paddings</key>
+                <rect>16,2,32,4</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">assets/well.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>

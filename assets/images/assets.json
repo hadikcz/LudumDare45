@@ -10,27 +10,6 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "Mill wheel",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 224,
-						"h": 224
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 224,
-						"h": 224
-					},
-					"frame": {
-						"x": 1,
-						"y": 1,
-						"w": 224,
-						"h": 224
-					}
-				},
-				{
 					"filename": "Ground",
 					"rotated": false,
 					"trimmed": false,
@@ -46,9 +25,51 @@
 					},
 					"frame": {
 						"x": 1,
-						"y": 227,
+						"y": 1,
 						"w": 504,
 						"h": 65
+					}
+				},
+				{
+					"filename": "Grass",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 504,
+						"h": 17
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 504,
+						"h": 17
+					},
+					"frame": {
+						"x": 1,
+						"y": 68,
+						"w": 504,
+						"h": 17
+					}
+				},
+				{
+					"filename": "Mill wheel",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 224,
+						"h": 224
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 224,
+						"h": 224
+					},
+					"frame": {
+						"x": 1,
+						"y": 87,
+						"w": 224,
+						"h": 224
 					}
 				},
 				{
@@ -67,93 +88,9 @@
 					},
 					"frame": {
 						"x": 227,
-						"y": 1,
+						"y": 87,
 						"w": 131,
 						"h": 200
-					}
-				},
-				{
-					"filename": "Bakery",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 80,
-						"h": 81
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 80,
-						"h": 81
-					},
-					"frame": {
-						"x": 360,
-						"y": 1,
-						"w": 80,
-						"h": 81
-					}
-				},
-				{
-					"filename": "Scythe",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 49,
-						"h": 40
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 49,
-						"h": 40
-					},
-					"frame": {
-						"x": 360,
-						"y": 84,
-						"w": 49,
-						"h": 40
-					}
-				},
-				{
-					"filename": "Character",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 22,
-						"h": 52
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 22,
-						"h": 52
-					},
-					"frame": {
-						"x": 411,
-						"y": 84,
-						"w": 22,
-						"h": 52
-					}
-				},
-				{
-					"filename": "well",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 43,
-						"h": 51
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 43,
-						"h": 51
-					},
-					"frame": {
-						"x": 360,
-						"y": 126,
-						"w": 43,
-						"h": 51
 					}
 				},
 				{
@@ -171,94 +108,10 @@
 						"h": 20
 					},
 					"frame": {
-						"x": 405,
-						"y": 138,
+						"x": 227,
+						"y": 289,
 						"w": 42,
 						"h": 20
-					}
-				},
-				{
-					"filename": "coin",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 39,
-						"h": 11
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 39,
-						"h": 11
-					},
-					"frame": {
-						"x": 435,
-						"y": 84,
-						"w": 39,
-						"h": 11
-					}
-				},
-				{
-					"filename": "bread",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 37,
-						"h": 4
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 37,
-						"h": 4
-					},
-					"frame": {
-						"x": 435,
-						"y": 97,
-						"w": 37,
-						"h": 4
-					}
-				},
-				{
-					"filename": "Grain",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 27,
-						"h": 41
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 27,
-						"h": 41
-					},
-					"frame": {
-						"x": 442,
-						"y": 1,
-						"w": 27,
-						"h": 41
-					}
-				},
-				{
-					"filename": "bakery tool",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 11,
-						"h": 43
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 11,
-						"h": 43
-					},
-					"frame": {
-						"x": 471,
-						"y": 1,
-						"w": 11,
-						"h": 43
 					}
 				},
 				{
@@ -276,10 +129,31 @@
 						"h": 15
 					},
 					"frame": {
-						"x": 442,
-						"y": 44,
+						"x": 271,
+						"y": 289,
 						"w": 9,
 						"h": 15
+					}
+				},
+				{
+					"filename": "bread",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 37,
+						"h": 4
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 37,
+						"h": 4
+					},
+					"frame": {
+						"x": 271,
+						"y": 306,
+						"w": 37,
+						"h": 4
 					}
 				},
 				{
@@ -297,8 +171,8 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 453,
-						"y": 46,
+						"x": 282,
+						"y": 289,
 						"w": 26,
 						"h": 14
 					}
@@ -318,31 +192,199 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 442,
-						"y": 62,
+						"x": 310,
+						"y": 289,
 						"w": 22,
 						"h": 13
 					}
 				},
 				{
-					"filename": "Grass",
+					"filename": "progress_bar_bg",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 504,
-						"h": 17
+						"w": 32,
+						"h": 4
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 504,
-						"h": 17
+						"w": 32,
+						"h": 4
 					},
 					"frame": {
-						"x": 1,
-						"y": 294,
-						"w": 504,
-						"h": 17
+						"x": 310,
+						"y": 304,
+						"w": 32,
+						"h": 4
+					}
+				},
+				{
+					"filename": "coin",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 39,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 39,
+						"h": 11
+					},
+					"frame": {
+						"x": 334,
+						"y": 289,
+						"w": 39,
+						"h": 11
+					}
+				},
+				{
+					"filename": "progress_bar_inner",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 4
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 4
+					},
+					"frame": {
+						"x": 344,
+						"y": 302,
+						"w": 32,
+						"h": 4
+					}
+				},
+				{
+					"filename": "Bakery",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 81
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 81
+					},
+					"frame": {
+						"x": 378,
+						"y": 87,
+						"w": 80,
+						"h": 81
+					}
+				},
+				{
+					"filename": "well",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 43,
+						"h": 51
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 43,
+						"h": 51
+					},
+					"frame": {
+						"x": 460,
+						"y": 87,
+						"w": 43,
+						"h": 51
+					}
+				},
+				{
+					"filename": "bakery tool",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 43
+					},
+					"frame": {
+						"x": 360,
+						"y": 87,
+						"w": 11,
+						"h": 43
+					}
+				},
+				{
+					"filename": "Grain",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 27,
+						"h": 41
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 27,
+						"h": 41
+					},
+					"frame": {
+						"x": 460,
+						"y": 140,
+						"w": 27,
+						"h": 41
+					}
+				},
+				{
+					"filename": "Scythe",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 49,
+						"h": 40
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 49,
+						"h": 40
+					},
+					"frame": {
+						"x": 378,
+						"y": 170,
+						"w": 49,
+						"h": 40
+					}
+				},
+				{
+					"filename": "Character",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 22,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 22,
+						"h": 52
+					},
+					"frame": {
+						"x": 429,
+						"y": 170,
+						"w": 22,
+						"h": 52
 					}
 				}
 			]
@@ -351,6 +393,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:e239e8cf58b519acfda661efa8b0e259:006d41df803c90ec6396cb5e0f13295f:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:a4e1e6f137180004e759c5daaad712b2:f06fafab963aae90d9f8c120a43888f5:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }
