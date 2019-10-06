@@ -33,9 +33,13 @@ export default class AbstractItem extends Phaser.GameObjects.Image {
 
     preUpdate () {
         if (this.body.touching.down) {
-            this.body.setAngularDrag(150);
-            this.body.setDrag(30, 10);
+            this.afterTouchGround();
         }
+    }
+
+    afterTouchGround () {
+        this.body.setAngularDrag(150);
+        this.body.setDrag(30, 10);
     }
 
     interact () {
@@ -50,15 +54,20 @@ export default class AbstractItem extends Phaser.GameObjects.Image {
     pickUp () {
         this._isPickedUp = true;
         this.body.allowGravity = false;
+        this.body.angularVelocity = 0;
+        this.afterTouchGround();
     }
 
     /**
      * @param {number} x
      * @param {number} y
+     * @param {Phaser.Math.Vector2} velocity
      */
-    putDown (x, y) {
+    putDown (x, y, velocity) {
         this._isPickedUp = false;
         this.body.allowGravity = true;
         this.setPosition(x, y);
+        this.body.setVelocity(velocity.x * 1.25, velocity.y);
+        this.afterTouchGround();
     }
 }

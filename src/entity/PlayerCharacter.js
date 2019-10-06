@@ -124,7 +124,8 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
     }
 
     putDown () {
-        this.pickedItem.putDown(this.x, this.y);
+        if (!this.pickedItem) return;
+        this.pickedItem.putDown(this.x, this.y, this.body.velocity);
         this.pickedItem = null;
     }
 }
