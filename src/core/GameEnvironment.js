@@ -99,11 +99,30 @@ export default class GameEnvironment {
     }
 
     findNearestInteractiveItem (target) {
+        let crop = this._findNearestInteractiveCrop(target);
+        if (crop) return crop;
+        return this._findNearestInteractiveItemBuilding(target);
+    }
+
+    _findNearestInteractiveItemBuilding (target) {
         let nearest = null;
         let nearestDistance = Infinity;
         this._buildingsAndItems.getChildren().forEach((subject) => {
             let distance = Phaser.Math.Distance.Between(subject.x, subject.y, target.x, target.y);
             if (distance < GameConfig.MinimalInteractiveDistance && distance < nearestDistance) {
+                nearest = subject;
+                nearestDistance = distance;
+            }
+        });
+        return nearest;
+    }
+
+    _findNearestInteractiveCrop (target) {
+        let nearest = null;
+        let nearestDistance = Infinity;
+        this.crops.getChildren().forEach((subject) => {
+            let distance = Phaser.Math.Distance.Between(subject.x, subject.y, target.x, target.y);
+            if (distance < GameConfig.MinimalInteractiveDistanceItem && distance < nearestDistance) {
                 nearest = subject;
                 nearestDistance = distance;
             }

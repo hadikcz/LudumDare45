@@ -7,6 +7,12 @@ export default class HarvestedCrop extends Phaser.GameObjects.Image {
         this.scene.physics.world.enable(this);
         this.setDepth(Depths.CROP);
 
+        /**
+         * @type {string}
+         * @private
+         */
+        this._name = 'Crop';
+
         this.body.setDrag(10, 10);
         this.body.setCircle(12, 0, -12);
         this.body.setCollideWorldBounds(true);
@@ -31,5 +37,13 @@ export default class HarvestedCrop extends Phaser.GameObjects.Image {
             this.body.setDrag(30, 10);
             // this.body.setAngularVelocity(0);
         }
+    }
+
+    interact () {
+        console.log('interacting with ' + this._name);
+    }
+
+    getInteractText () {
+        return 'Pickup ' + this._name;
     }
 }
