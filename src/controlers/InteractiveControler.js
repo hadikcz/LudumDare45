@@ -20,8 +20,13 @@ export default class InteractiveControler {
     interact () {
         let nearestInteractiveItem = this.playerCharacter.getNearestInteractiveItem();
         if (nearestInteractiveItem) {
-            console.log(nearestInteractiveItem);
             nearestInteractiveItem.interact();
+        } else {
+            // this.ui.placeMenuUI.show();
+            console.log('build');
+            if (true) {
+                this.scene.buildControler.buildGrainField();
+            }
         }
     }
 }

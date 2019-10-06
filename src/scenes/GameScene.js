@@ -9,6 +9,7 @@ import GameConfig from 'GameConfig';
 import PlayerCharacter from 'entity/PlayerCharacter';
 import InteractiveControler from 'controlers/InteractiveControler';
 import GameControls from 'input/GameControls';
+import BuildControler from 'controlers/BuildControler';
 
 export default class GameScene extends Phaser.Scene {
     constructor () {
@@ -43,6 +44,7 @@ export default class GameScene extends Phaser.Scene {
         this.playerCharacter = new PlayerCharacter(this, 300, this.gameEnvironment.getGroundDimensionY() - 60);
 
         this.interactiveControler = new InteractiveControler(this, this.playerCharacter);
+        this.buildControler = new BuildControler(this, this.playerCharacter, this.gameEnvironment);
 
         this.ui = new UI(this);
 

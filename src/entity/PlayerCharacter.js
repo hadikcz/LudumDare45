@@ -54,7 +54,7 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
 
         this.body.setSize(22, 52);
 
-        this._overHeadText = this.scene.add.text(this.x, this.y, '', { fontFamily: 'Verdana, Arial', fontSize: 45, color: '#FFFFFF' }); // '#FF0000'
+        this._overHeadText = this.scene.add.text(this.x, this.y, GameConfig.DefaultOverHeadText, { fontFamily: 'Verdana, Arial', fontSize: 45, color: '#FFFFFF' }); // '#FF0000'
         this._overHeadText.setOrigin(0.25, 2);
         this._overHeadText.setDepth(Depths.PLAYER_OVERHEAD_TEXT);
         this._overHeadText.setScale(0.25, 0.25);
@@ -76,7 +76,7 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
             this._overHeadText.setText(this._nearestInteractiveItem.getInteractText());
         } else {
             this._nearestInteractiveItem = null;
-            this._overHeadText.setText('');
+            this._overHeadText.setText(GameConfig.DefaultOverHeadText);
         }
         this._overHeadText.setPosition(this.x, this.y);
     }

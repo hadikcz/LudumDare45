@@ -10,5 +10,6 @@ export default {
         offsetX: 0,
         offsetY: 0
     },
-    MinimalInteractiveDistance: 75
+    MinimalInteractiveDistance: 75,
+    DefaultOverHeadText: 'Place/build'
 };

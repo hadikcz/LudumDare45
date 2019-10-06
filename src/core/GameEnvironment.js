@@ -105,6 +105,10 @@ export default class GameEnvironment {
         return nearest;
     }
 
+    addNewBuilding (gameObject) {
+        this._buildingsAndItems.add(gameObject);
+    }
+
     _createGround () {
         let y = GameConfig.GameWindowSettings.height;
         let width = this.scene.textures.getFrame('assets', 'Ground').width;
