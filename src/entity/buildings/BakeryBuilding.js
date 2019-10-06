@@ -88,7 +88,6 @@ export default class BakeryBuilding extends Phaser.GameObjects.Container {
     }
 
     preUpdate () {
-        console.log(this.queue);
         if (this.queue > 0) {
             this.flourIcon.setVisible(false);
             this.fireEffect.setVisible(true);
