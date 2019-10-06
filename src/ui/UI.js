@@ -23,6 +23,10 @@ export default class UI {
         this.buildMenuUI = new BuildMenuUI(this.scene);
     }
 
+    hide () {
+        $('#ui').hide();
+    }
+
     show () {
         $('#ui').show();
     }

@@ -2,6 +2,7 @@
 import Phaser from 'phaser';
 import BootScene from './scenes/BootScene';
 import GameScene from './scenes/GameScene';
+import StoryTellEndScene from './scenes/StoryTellEndScene';
 import GameConfig from './GameConfig.js';
 import Stats from 'stats.js/src/Stats';
 
@@ -39,7 +40,8 @@ const config = {
     antialias: true,
     scene: [
         BootScene,
-        GameScene
+        GameScene,
+        StoryTellEndScene
     ]
 };
 

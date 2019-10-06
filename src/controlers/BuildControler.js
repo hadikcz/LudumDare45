@@ -42,6 +42,9 @@ export default class BuildControler {
             case 3:
                 building = new BakeryBuilding(this.scene, this.playerCharacter.x, this.gameEnvironment.getGroundDimensionY());
                 break;
+            case 4:
+                this.scene.gameOver();
+                break;
         }
 
         if (building) {
