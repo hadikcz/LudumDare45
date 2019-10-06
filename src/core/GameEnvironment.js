@@ -77,9 +77,6 @@ export default class GameEnvironment {
 
         this.merchant = new Merchant(this.scene, 500, this.getGroundDimensionY());
         this._buildingsAndItems.add(this.merchant);
-
-        let item = new Flour(this.scene, 500, 200);
-        this.items.add(item);
     }
 
     update () {

@@ -25,9 +25,8 @@ export default class AbstractItem extends Phaser.GameObjects.Sprite {
         this._price = 0;
 
         this.setDepth(Depths.ITEMS);
-        this.body.setDrag(10, 10);
+        this.body.setMass(10);
         this.body.setCollideWorldBounds(true);
-        this.body.setFriction(0.6);
     }
 
     explode (initY = false) {
@@ -71,7 +70,7 @@ export default class AbstractItem extends Phaser.GameObjects.Sprite {
 
     afterTouchGround () {
         this.body.setAngularDrag(150);
-        this.body.setDrag(30, 10);
+        this.body.setDrag(250, 10);
     }
 
     interact () {
