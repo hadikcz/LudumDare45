@@ -128,7 +128,7 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
 
     putDown (skipThrow = false) {
         if (!this.pickedItem) return;
-        if (skipThrow) {
+        if (!skipThrow) {
             this.pickedItem.putDown(this.x, this.y, this.body.velocity);
         } else {
             this.pickedItem.putDown(this.x, this.y);

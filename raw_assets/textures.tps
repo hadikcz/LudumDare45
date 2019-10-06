@@ -351,6 +351,22 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">assets/coin1.png</key>
+            <key type="filename">assets/coin2.png</key>
+            <key type="filename">assets/coin3.png</key>
+            <key type="filename">assets/coin4.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>3,3,5,5</rect>
+                <key>scale9Paddings</key>
+                <rect>3,3,5,5</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">assets/flour.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -361,6 +377,19 @@
                 <rect>6,3,11,7</rect>
                 <key>scale9Paddings</key>
                 <rect>6,3,11,7</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">assets/merchant.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>6,15,11,29</rect>
+                <key>scale9Paddings</key>
+                <rect>6,15,11,29</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>

@@ -304,6 +304,27 @@
 					}
 				},
 				{
+					"filename": "coin4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 5,
+						"h": 11
+					},
+					"frame": {
+						"x": 389,
+						"y": 171,
+						"w": 5,
+						"h": 11
+					}
+				},
+				{
 					"filename": "progress_bar_bg",
 					"rotated": false,
 					"trimmed": false,
@@ -388,6 +409,69 @@
 					}
 				},
 				{
+					"filename": "coin1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 466,
+						"y": 1,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "coin2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
+					},
+					"frame": {
+						"x": 468,
+						"y": 14,
+						"w": 11,
+						"h": 11
+					}
+				},
+				{
+					"filename": "coin3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 11,
+						"h": 11
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 0,
+						"w": 8,
+						"h": 11
+					},
+					"frame": {
+						"x": 479,
+						"y": 1,
+						"w": 8,
+						"h": 11
+					}
+				},
+				{
 					"filename": "Grass",
 					"rotated": false,
 					"trimmed": false,
@@ -414,6 +498,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:6aea7c751ffa13a565ca8881b459c822:cf7949e18069789925faec26756f088a:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:9c1a4ed2817dafde2495321968f5fab9:9baeedf6c45c5dae5d6470f02c73b5c5:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }
