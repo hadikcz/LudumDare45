@@ -4,6 +4,12 @@ export default class HarvestedCrop extends AbstractItem {
     constructor (scene, x, y) {
         super(scene, x, y, 'Crops', 'Crop');
         this.body.setCircle(12, 0, -12);
+
+        /**
+         * @type {number}
+         * @private
+         */
+        this._price = 1;
     }
 
     explode (initY = false) {

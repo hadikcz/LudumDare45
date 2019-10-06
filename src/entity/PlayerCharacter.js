@@ -77,6 +77,9 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
 
     preUpdate () {
         this.controls.update();
+        if (this.pickedItem) {
+            this.pickedItem.setPosition(this.x, this.y + 20);
+        }
     }
 
     update () {
@@ -89,9 +92,6 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
             this._overHeadText.setText(GameConfig.DefaultOverHeadText);
         }
         // this._overHeadText.setPosition(this.x, this.y);
-        if (this.pickedItem) {
-            this.pickedItem.setPosition(this.x, this.y + 10);
-        }
     }
 
     /**
@@ -120,12 +120,20 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
     }
 
     pickUp (item) {
+        if (this.pickedItem) return;
         this.pickedItem = item;
+        // this.pickedItem.setPosition(0, -30);
+        // this.add(this.pickedItem);
     }
 
-    putDown () {
+    putDown (skipThrow = false) {
         if (!this.pickedItem) return;
-        this.pickedItem.putDown(this.x, this.y, this.body.velocity);
+        if (skipThrow) {
+            this.pickedItem.putDown(this.x, this.y, this.body.velocity);
+        } else {
+            this.pickedItem.putDown(this.x, this.y);
+            // this.pickedItem.putDown(-10000, -10000);
+        }
         this.pickedItem = null;
     }
 }

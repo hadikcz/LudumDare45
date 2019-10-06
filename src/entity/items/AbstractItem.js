@@ -18,10 +18,30 @@ export default class AbstractItem extends Phaser.GameObjects.Image {
          */
         this._name = name;
 
+        /**
+         * @type {number}
+         * @private
+         */
+        this._price = 0;
+
         this.setDepth(Depths.ITEMS);
         this.body.setDrag(10, 10);
         this.body.setCollideWorldBounds(true);
         this.body.setFriction(0.6);
+    }
+
+    /**
+     * @return {string}
+     */
+    getName () {
+        return this._name;
+    }
+
+    /**
+     * @return {number}
+     */
+    getPrice () {
+        return this._price;
     }
 
     /**
@@ -67,7 +87,9 @@ export default class AbstractItem extends Phaser.GameObjects.Image {
         this._isPickedUp = false;
         this.body.allowGravity = true;
         this.setPosition(x, y);
-        this.body.setVelocity(velocity.x * 1.25, velocity.y);
+        if (velocity !== undefined) {
+            this.body.setVelocity(velocity.x * 1.25, velocity.y);
+        }
         this.afterTouchGround();
     }
 }
