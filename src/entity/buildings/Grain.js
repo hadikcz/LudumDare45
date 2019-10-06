@@ -45,8 +45,6 @@ export default class Grain extends Phaser.GameObjects.Image {
             .setAlpha(0)
             .setScale(0.5);
 
-        // this.scene.add.image(this.x, this.y - 100, 'assets', 'progress_bar_inner');
-
         /**
          * @type {ProgressBarUI}
          */
@@ -61,9 +59,6 @@ export default class Grain extends Phaser.GameObjects.Image {
             offsetY: -60
         });
         this.healthbar.setPercent(0);
-
-        // this.add(this.healthbar.bgImage);
-        // this.add(this.healthbar.barImage);
         this.healthbar.show();
 
         this._stateStartGrowing();

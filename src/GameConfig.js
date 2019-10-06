@@ -10,6 +10,7 @@ export default {
         offsetX: 0,
         offsetY: 0
     },
+    MillLoop: 10000,
     MinimalInteractiveDistance: 75,
     MinimalInteractiveDistanceItem: 50,
     DefaultOverHeadText: 'Place/build'

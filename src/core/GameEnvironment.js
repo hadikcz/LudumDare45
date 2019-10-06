@@ -92,6 +92,10 @@ export default class GameEnvironment {
 
         let crop = new HarvestedCrop(this.scene, 150, this.getGroundDimensionY() - 100);
         this.items.add(crop);
+        crop = new HarvestedCrop(this.scene, 175, this.getGroundDimensionY() - 100);
+        this.items.add(crop);
+        crop = new HarvestedCrop(this.scene, 185, this.getGroundDimensionY() - 100);
+        this.items.add(crop);
     }
 
     update () {

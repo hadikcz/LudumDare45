@@ -12,8 +12,7 @@ export default class HarvestedCrop extends AbstractItem {
         this._price = 1;
     }
 
-    interact () {
-        console.log('ss');
+    interact () {''
         this.scene.updateCoins(1);
         this.destroy();
     }
