@@ -15,20 +15,21 @@
             <img src="assets/ui/coin.png">
             <div class="coins">0</div>
         </div>
-        <div class="build-menu">
+        <div class="build-menu" style="display: none">
             <div class="title">Build</div>
             <div class="row-wrapper">
-                <div class="row">
+                <div class="row" id="rowShop0">
                     Field <div class="price">5 <div class="coin"></div></div>
                 </div>
-                <div class="row">
+                <div class="row" id="rowShop1">
                     Mill <div class="price">15 <div class="coin"></div></div>
                 </div>
-                <div class="row">
+                <div class="row" id="rowShop2">
                     Bakery <div class="price">45 <div class="coin"></div></div>
                 </div>
             </div>
             <div class="note">Press Q for close</div>
+            <div class="info not-enough-coins" style="display: none;">Not enough coins</div>
         </div>
     </div>
     <div id="content" style="display: block; width: 100%; text-align: center"></div>

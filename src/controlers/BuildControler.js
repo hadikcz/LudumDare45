@@ -1,4 +1,7 @@
 import Grain from 'entity/buildings/Grain';
+import Buildings from 'structs/Buildings';
+import MillBuilding from 'entity/buildings/MillBuilding';
+import BakeryBuilding from 'entity/buildings/BakeryBuilding';
 
 export default class BuildControler {
     /**
@@ -26,8 +29,22 @@ export default class BuildControler {
         this.gameEnvironment = gameEnvironment;
     }
 
-    buildGrainField () {
-        let grain = new Grain(this.scene, this.playerCharacter.x, this.gameEnvironment.getGroundDimensionY());
-        this.gameEnvironment.addNewBuilding(grain);
+    buildById (id) {
+        let building = null;
+        switch (id) {
+            case 1:
+                building = new Grain(this.scene, this.playerCharacter.x, this.gameEnvironment.getGroundDimensionY());
+                break;
+            case 2:
+                building = new MillBuilding(this.scene, this.playerCharacter.x, this.gameEnvironment.getGroundDimensionY());
+                break;
+            case 3:
+                building = new BakeryBuilding(this.scene, this.playerCharacter.x, this.gameEnvironment.getGroundDimensionY());
+                break;
+        }
+
+        if (building) {
+            this.gameEnvironment.addNewBuilding(building);
+        }
     }
 }

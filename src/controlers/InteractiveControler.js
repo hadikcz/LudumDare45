@@ -22,10 +22,11 @@ export default class InteractiveControler {
         if (nearestInteractiveItem) {
             nearestInteractiveItem.interact();
         } else {
-            // this.ui.placeMenuUI.show();
             console.log('build');
             if (true) {
-                this.scene.buildControler.buildGrainField();
+                this.playerCharacter.lockMovementWhileOpenShop();
+                this.scene.ui.buildMenuUI.show();
+                // this.scene.buildControler.buildGrainField();
             }
         }
     }

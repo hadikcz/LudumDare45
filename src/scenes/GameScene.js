@@ -10,6 +10,7 @@ import PlayerCharacter from 'entity/PlayerCharacter';
 import InteractiveControler from 'controlers/InteractiveControler';
 import GameControls from 'input/GameControls';
 import BuildControler from 'controlers/BuildControler';
+import Buildings from 'structs/Buildings';
 
 export default class GameScene extends Phaser.Scene {
     constructor () {
@@ -62,6 +63,8 @@ export default class GameScene extends Phaser.Scene {
         this.physics.add.collider(this.gameEnvironment.items, this.gameEnvironment.groundGroup);
 
         this.ui.show();
+
+        this.updateCoins(Buildings.getBuildingById(1).price);
     }
 
     update () {

@@ -30,6 +30,7 @@ body {
     z-index: 10000;
     left: 50%;
     transform: translateX(-50%);
+    pointer-events: none;
 }
 
 .coins-wrapper {
@@ -87,6 +88,10 @@ body {
     display: inline-block;
 }
 
+.build-menu .row.active {
+    background: #a7a7a7;
+}
+
 .build-menu .coin {
     background: url('../ui/coin.png') no-repeat;
     width: 11px;
@@ -100,4 +105,12 @@ body {
     color: #ffe33e;
     border: 0;
     text-align: center;
+}
+
+.build-menu .not-enough-coins {
+    color: red;
+    margin-top: 10px;
+    width: 192px;
+    transform: translateX(-21%);
+    font-size: 22px;
 }

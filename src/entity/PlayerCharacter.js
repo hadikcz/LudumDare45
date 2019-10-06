@@ -54,6 +54,11 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
          */
         this._nearestInteractiveItem = null;
 
+        /**
+         * @type {boolean}
+         */
+        this.lockedMovementWhileOpenShop = false;
+
         this.body.setBounce(0.2);
         this.body.setCollideWorldBounds(true);
 
@@ -66,6 +71,14 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
         this._overHeadText.setDepth(Depths.PLAYER_OVERHEAD_TEXT);
         this._overHeadText.setScale(0.25, 0.25);
         this.add(this._overHeadText);
+    }
+
+    lockMovementWhileOpenShop () {
+        this.lockedMovementWhileOpenShop = true;
+    }
+
+    unLockMovementWhileOpenShop () {
+        this.lockedMovementWhileOpenShop = false;
     }
 
     /**

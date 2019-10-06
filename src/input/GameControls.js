@@ -20,7 +20,11 @@ export default class GameControls {
 
     update () {
         if (Phaser.Input.Keyboard.JustDown(this.keys.interact)) {
-            this.scene.interactiveControler.interact();
+            if (this.scene.playerCharacter.lockedMovementWhileOpenShop) {
+                this.scene.ui.buildMenuUI.actionSelect();
+            } else {
+                this.scene.interactiveControler.interact();
+            }
         }
     }
 }

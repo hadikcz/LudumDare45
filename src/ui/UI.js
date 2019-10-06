@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Phaser from 'phaser';
+import BuildMenuUI from 'ui/BuildMenuUI';
 
 export default class UI {
     /**
@@ -15,6 +16,11 @@ export default class UI {
          * @type {*|jQuery|HTMLElement}
          */
         this.coinSelector = $('.coins');
+
+        /**
+         * @type {BuildMenuUI}
+         */
+        this.buildMenuUI = new BuildMenuUI(this.scene);
     }
 
     show () {
