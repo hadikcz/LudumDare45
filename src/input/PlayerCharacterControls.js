@@ -33,6 +33,7 @@ export default class PlayerCharacterControls {
     }
 
     update () {
+        if (!this.scene.ui.skippedTutorial) return;
         let click = false;
 
         if (!this.playerCharacter.lockedMovementWhileOpenShop) {

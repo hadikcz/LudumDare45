@@ -21,6 +21,18 @@ export default class UI {
          * @type {BuildMenuUI}
          */
         this.buildMenuUI = new BuildMenuUI(this.scene);
+
+        /**
+         * @type {boolean}
+         */
+        this.skippedTutorial = false;
+    }
+
+    skipTutorial () {
+        if (this.skippedTutorial) return;
+        this.skippedTutorial = true;
+        $('.tutorial').fadeOut(500);
+        $('.tutorial-fade').fadeOut(500);
     }
 
     hide () {

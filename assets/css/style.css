@@ -53,6 +53,23 @@ body {
     transform: translateY(-5px);
 }
 
+.tutorial-fade {
+    width: 1024px;
+    height: 640px;
+    background: #000000aa;
+    z-index: 100000;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.tutorial {
+    z-index: 300000;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 .build-menu {
     color: white;
     background: #6f4a2b;
