@@ -33,7 +33,7 @@ export default class GameScene extends Phaser.Scene {
         /**
          * @type {number}
          */
-        this.coins = 100000;
+        this.coins = 0;
     }
 
     create () {
