@@ -18,8 +18,8 @@ export default class MillBuilding extends Phaser.GameObjects.Container {
          * @type {Phaser.GameObjects.Image}
          * @private
          */
-        this.millWheel = this.scene.add.image(0, -135, 'assets', 'Mill wheel').setDepth(Depths.MILL_WHEEL);
-        this.add(this.millWheel);
+        this.millWheel = this.scene.add.image(this.x, this.y-135, 'assets', 'Mill wheel').setDepth(Depths.MILL_WHEEL);
+        // this.add(this.millWheel);
 
         /**
          * @type {string}
