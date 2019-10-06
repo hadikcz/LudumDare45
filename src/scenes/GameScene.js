@@ -60,11 +60,18 @@ export default class GameScene extends Phaser.Scene {
 
         this.physics.add.collider(this.playerCharacter, this.gameEnvironment.groundGroup);
         this.physics.add.collider(this.gameEnvironment.items, this.gameEnvironment.groundGroup);
+
+        this.ui.show();
     }
 
     update () {
         this.gameControls.update();
         this.playerCharacter.update();
         this.gameEnvironment.update();
+    }
+
+    updateCoins (value) {
+        this.coins += value;
+        this.ui.coinSelector.html(this.coins);
     }
 }

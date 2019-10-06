@@ -46,7 +46,7 @@ export default class WellBuilding extends Phaser.GameObjects.Image {
 
     _spawnCoins (count) {
         let initY = Phaser.Math.RND.integerInRange(-400, -300);
-        for (let i = 0; i < Phaser.Math.RND.integerInRange(2, 4); i++) {
+        for (let i = 0; i < count; i++) {
             let coin = new Coin(this.scene, this.x, this.y);
             coin.explode(initY);
             this.scene.gameEnvironment.items.add(coin);

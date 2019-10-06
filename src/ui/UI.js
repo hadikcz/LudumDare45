@@ -10,9 +10,14 @@ export default class UI {
          * @type {Phaser.Scene}
          */
         this.scene = scene;
+
+        /**
+         * @type {*|jQuery|HTMLElement}
+         */
+        this.coinSelector = $('.coins');
     }
 
-    hide () {
-
+    show () {
+        $('#ui').show();
     }
 }
