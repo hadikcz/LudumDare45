@@ -1,8 +1,7 @@
 import Depths from 'structs/Depths';
-import HarvestedCrop from 'entity/items/HarvestedCrop';
 import Coin from 'entity/items/Coin';
 
-export default class WellBuilding extends Phaser.GameObjects.Image {
+export default class Merchant extends Phaser.GameObjects.Image {
     constructor (scene, x, y) {
         super(scene, x, y, 'assets', 'merchant');
         this.scene.add.existing(this);
@@ -41,8 +40,9 @@ export default class WellBuilding extends Phaser.GameObjects.Image {
     }
 
     _spawnCoins (count) {
+        this.scene.soundManager.coinsReward.play();
         for (let i = 0; i < count; i++) {
-            let coin = new Coin(this.scene, this.x, this.y);
+            let coin = new Coin(this.scene, this.x, this.y - 30);
             coin.explode();
             this.scene.gameEnvironment.items.add(coin);
         }

@@ -65,6 +65,8 @@ export default class Grain extends Phaser.GameObjects.Image {
         this.tint = 0x00FF00;
         this.setOrigin(0.5, 1);
         this.setDepth(Depths.GRAIN);
+
+        this.scene.soundManager.plantSeed.play();
     }
 
     preUpdate () {
@@ -149,6 +151,7 @@ export default class Grain extends Phaser.GameObjects.Image {
         let bucket = this.scene.playerCharacter.pickedItem;
         this.scene.playerCharacter.putDown(true);
         bucket.destroy();
+        this.scene.soundManager.waterPlant.play();
 
         this.waterDropletImage.destroy();
         clearInterval(this.waterBeforeDieInterval);
@@ -205,6 +208,7 @@ export default class Grain extends Phaser.GameObjects.Image {
     _interactHarvest () {
         if (this.state !== BuildingsAndItemsStates.GRAIN.GROWED) return;
 
+        this.scene.soundManager.harvest.play();
         this._timeEventWaitForPickUp.destroy();
         this.state = BuildingsAndItemsStates.GRAIN.HARVESTED;
 

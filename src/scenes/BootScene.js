@@ -28,5 +28,14 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('bg3', 'assets/images/bg3.png');
         this.load.image('bgStatic', 'assets/images/bgStatic.png');
         this.load.image('sky', 'assets/images/sky.png');
+
+        this.load.audio('coins', 'assets/sounds/coins.mp3');
+        this.load.audio('footstep1', 'assets/sounds/footstep1.mp3');
+        this.load.audio('footstep2', 'assets/sounds/footstep2.mp3');
+        this.load.audio('harvest', 'assets/sounds/harvest.mp3');
+        this.load.audio('plantSeed', 'assets/sounds/plantSeed.mp3');
+        this.load.audio('take', 'assets/sounds/take.mp3');
+        this.load.audio('waterPlant', 'assets/sounds/waterPlant.mp3');
+        this.load.audio('coinsReward', 'assets/sounds/coinsReward.mp3');
     }
 }

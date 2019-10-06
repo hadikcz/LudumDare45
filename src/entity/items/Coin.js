@@ -12,7 +12,8 @@ export default class HarvestedCrop extends AbstractItem {
         this._price = 1;
     }
 
-    interact () {''
+    interact () {
+        this.scene.soundManager.coins.play();
         this.scene.updateCoins(1);
         this.destroy();
     }

@@ -83,6 +83,7 @@ export default class AbstractItem extends Phaser.GameObjects.Sprite {
     }
 
     pickUp () {
+        this.scene.soundManager.take.play();
         this._isPickedUp = true;
         this.body.allowGravity = false;
         this.body.angularVelocity = 0;
