@@ -51,3 +51,53 @@ body {
     margin-left: 5px;
     transform: translateY(-5px);
 }
+
+.build-menu {
+    color: white;
+    background: #6f4a2b;
+    width: 100px;
+    height: 120px;
+    padding: 5px;
+    bottom: 127px;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.build-menu .title {
+    font-size: 19px;
+    color: #ffe33e;
+    text-align: center;
+}
+
+.build-menu .row {
+    width: 90%;
+    padding: 4px;
+    background: #2a1700;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.build-menu .row:nth-child(even) {
+    background: #3c2a00;
+}
+
+.build-menu .row .price {
+    float: right;
+    display: inline-block;
+}
+
+.build-menu .coin {
+    background: url('../ui/coin.png') no-repeat;
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+}
+
+
+.build-menu .note {
+    font-size: 17px;
+    color: #ffe33e;
+    border: 0;
+    text-align: center;
+}
