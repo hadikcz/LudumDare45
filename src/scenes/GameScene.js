@@ -38,10 +38,9 @@ export default class GameScene extends Phaser.Scene {
         this.soundManager = new SoundManager(this);
 
         let spawnY = GameConfig.GameWindowSettings.height - this.textures.getFrame('assets', 'Ground').height;
-        this.playerCharacter = new PlayerCharacter(this, 300, this.gameEnvironment.getGroundDimensionY() - 150);
+        this.playerCharacter = new PlayerCharacter(this, 300, this.gameEnvironment.getGroundDimensionY() - 60);
 
         this.ui = new UI(this);
-
 
         this.physics.add.collider(this.playerCharacter, this.gameEnvironment.groundGroup);
     }

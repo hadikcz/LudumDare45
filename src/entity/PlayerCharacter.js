@@ -40,7 +40,7 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
          * @type {Phaser.GameObjects.Image}
          * @private
          */
-        this.scythe = this.scene.add.image(14, 0, 'assets', 'Scythe');//.setScale(1, -1);
+        this.scythe = this.scene.add.image(14, 24, 'assets', 'Scythe');//.setScale(1, -1);
         this.add(this.scythe);
 
         this.body.setBounce(0.2);
