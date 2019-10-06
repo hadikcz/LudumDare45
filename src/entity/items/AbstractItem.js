@@ -1,6 +1,6 @@
 import Depths from 'structs/Depths';
 
-export default class AbstractItem extends Phaser.GameObjects.Image {
+export default class AbstractItem extends Phaser.GameObjects.Sprite {
     constructor (scene, x, y, keyFrame, name) {
         super(scene, x, y, 'assets', keyFrame);
         this.scene.add.existing(this);

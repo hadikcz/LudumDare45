@@ -24,7 +24,15 @@ export default class GameScene extends Phaser.Scene {
          */
         this.ui = null;
 
+        /**
+         * @type {boolean}
+         */
         this.isGameOver = false;
+
+        /**
+         * @type {number}
+         */
+        this.coins = 0;
     }
 
     create () {
