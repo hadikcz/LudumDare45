@@ -42,16 +42,21 @@ export default class PlayerCharacterControls {
         // }
         // if (this._targetCharacterToControl._lockControlls) return;
 
+        let click = false;
         if (this.keys.left.isDown || this.keys.left2.isDown) {
             this.playerCharacter.moveTo('left');
+            click = true;
         } else if (this.keys.right.isDown || this.keys.right2.isDown) {
             this.playerCharacter.moveTo('right');
-        } else {
-            // this.playerCharacter.moveTo('stop');
+            click = true;
         }
 
         if (this.keys.up.isDown || this.keys.up2.isDown) {
             this.playerCharacter.moveTo('jump');
+            click = true;
+        }
+        if (!click) {
+            this.playerCharacter.moveTo('stopX');
         }
 
         // if (this.keys.action.isDown || this.keys.action2.isDown) {

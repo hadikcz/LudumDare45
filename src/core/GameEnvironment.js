@@ -25,12 +25,16 @@ export default class GameEnvironment {
             .setScrollFactor(0)
             .setOrigin(0);
 
-        this.scene.add.image(-150, yFix, 'bg2')
+        this.scene.add.image(-150, yFix + 90, 'bg2')
             .setScrollFactor(0.1)
             .setOrigin(0);
 
-        this.scene.add.image(0, yFix, 'bg3')
+        this.scene.add.image(0, yFix + 40, 'bg3')
             .setScrollFactor(0.2)
+            .setOrigin(0);
+
+        this.scene.add.image(950, yFix + 40, 'bg3')
+            .setScrollFactor(0.25)
             .setOrigin(0);
 
         /**
@@ -74,13 +78,12 @@ export default class GameEnvironment {
     _createGround () {
         let y = GameConfig.GameWindowSettings.height;
         let width = this.scene.textures.getFrame('assets', 'Ground').width;
-        for (let i = -1; i < 3; i++) {
+        for (let i = -1; i < 6; i++) {
             let ground = this.scene.add.image(i * width, y, 'assets', 'Ground').setOrigin(0, 1)
                 .setDepth(Depths.GROUND);
             this.scene.physics.world.enable(ground);
             ground.body.setImmovable(true);
             ground.body.allowGravity = false;
-            ground.body.setFrictionX(1);
             this.groundGroup.add(ground);
         }
     }
@@ -88,7 +91,7 @@ export default class GameEnvironment {
     _createGrass () {
         let y = this.getGroundDimensionY() - 8;
         let width = this.scene.textures.getFrame('assets', 'Grass').width;
-        for (let i = -1; i < 3; i++) {
+        for (let i = -1; i < 6; i++) {
             let ground = this.scene.add.image(i * width, y, 'assets', 'Grass').setOrigin(0, 0)
                 .setDepth(Depths.GRASS);
             this._grassGroup.add(ground);

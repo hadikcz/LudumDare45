@@ -47,7 +47,6 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
         this.body.setCollideWorldBounds(true);
 
         this.body.setSize(22, 52);
-        this.body.setFrictionX(1);
     }
 
     update () {
@@ -65,11 +64,14 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
         } else if (direction === 'right') {
             this.body.setVelocityX(this._movementSpeed);
             this.setScale(1, 1);
-        } else {
-            this.body.setVelocityX(0);
         }
+
         if (direction === 'jump' && this.body.touching.down) {
             this.body.setVelocityY(-this._jumpSpeed);
+        }
+
+        if (direction === 'stopX') {
+            this.body.setVelocityX(0);
         }
     }
 }
