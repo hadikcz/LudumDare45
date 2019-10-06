@@ -33,18 +33,13 @@ export default class GameScene extends Phaser.Scene {
         /**
          * @type {number}
          */
-        this.coins = 100000;
+        this.coins = 0;
     }
 
     create () {
         window.gameScene = this;
         this.physics.world.setBounds(0, 0, GameConfig.World.width, GameConfig.World.height);
         this.effectManager = new EffectManager(this);
-        // this.cameras.main.startFollow({ x: GameConfig.World.width / 2, y: GameConfig.World.height / 2 });
-
-        // this.cameras.main.setBounds(0, 0, 1500, GameConfig.GameWindowSettings.height);
-
-        // this.cameras.main.setZoom(GameConfig.GameWindowSettings.initZoom);
 
         this.gameEnvironment = new GameEnvironment(this);
         this.soundManager = new SoundManager(this);

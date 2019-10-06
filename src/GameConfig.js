@@ -11,6 +11,7 @@ export default {
         offsetY: 0
     },
     MillLoop: 10000,
+    BakeryLoop: 20000,
     MinimalInteractiveDistance: 75,
     MinimalInteractiveDistanceItem: 50,
     DefaultOverHeadText: 'Place/build'

@@ -1,6 +1,8 @@
 import Depths from 'structs/Depths';
 import Flour from 'entity/items/Flour';
 import Bread from 'entity/items/Bread';
+import ProgressBarUI from 'ui/ProgressBarUI';
+import GameConfig from 'GameConfig';
 
 export default class BakeryBuilding extends Phaser.GameObjects.Container {
     constructor (scene, x, y) {
@@ -59,16 +61,25 @@ export default class BakeryBuilding extends Phaser.GameObjects.Container {
         this._name = 'Bakery';
 
         /**
+         * @type {ProgressBarUI}
+         */
+        this.healthbar = new ProgressBarUI(this.scene, {
+            followTarget: this,
+            atlas: 'assets',
+            atlasBg: 'progress_bar_bg',
+            atlasBar: 'progress_bar_inner',
+            tintBar: 0x00FF00,
+            depth: Depths.UI,
+            offsetX: -15,
+            offsetY: -100
+        });
+        this.healthbar.setPercent(0);
+        this.healthbar.hide();
+
+        /**
          * @type {number}
          */
         this.queue = 0;
-
-        this.loopEvent = this.scene.time.addEvent({
-            delay: 5000,
-            repeat: Infinity,
-            callbackScope: this,
-            callback: this._loop
-        });
 
         this.scene.tweens.add({
             targets: this.flourIcon,
@@ -89,6 +100,23 @@ export default class BakeryBuilding extends Phaser.GameObjects.Container {
 
     preUpdate () {
         if (this.queue > 0) {
+            if (!this.loopTimeout) {
+                let tick = 10;
+                let percent = 0;
+                this.healthbar.show();
+                let interval = setInterval(() => {
+                    let value = 100 / (GameConfig.BakeryLoop / tick);
+                    percent += value;
+                    this.healthbar.setPercent(percent);
+                    if (percent >= 100) {
+                        clearInterval(interval);
+                    }
+                }, tick);
+                this.loopTimeout = setTimeout(() => {
+                    this._loop();
+                }, GameConfig.BakeryLoop);
+            }
+
             this.flourIcon.setVisible(false);
             this.fireEffect.setVisible(true);
         } else {
@@ -111,10 +139,11 @@ export default class BakeryBuilding extends Phaser.GameObjects.Container {
     }
 
     _loop () {
-        if (this.queue > 0) {
-            this.queue--;
-            this._flushBread();
-        }
+        this.queue--;
+        this._flushBread();
+        clearTimeout(this.loopTimeout);
+        this.loopTimeout = null;
+        this.healthbar.hide();
     }
 
     _flushBread () {

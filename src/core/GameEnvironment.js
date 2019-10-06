@@ -2,11 +2,8 @@ import Phaser from 'phaser';
 import GameConfig from 'GameConfig';
 import Depths from 'structs/Depths';
 import WellBuilding from 'entity/buildings/WellBuilding';
-import BakeryBuilding from 'entity/buildings/BakeryBuilding';
-import Grain from 'entity/buildings/Grain';
-import MillBuilding from 'entity/buildings/MillBuilding';
-import HarvestedCrop from 'entity/items/HarvestedCrop';
 import Merchant from 'entity/buildings/Merchant';
+import Flour from 'entity/items/Flour';
 
 export default class GameEnvironment {
     /**
@@ -75,27 +72,14 @@ export default class GameEnvironment {
         /**
          * @type {WellBuilding}
          */
-        this.wellBuilding = new WellBuilding(this.scene, 300, this.getGroundDimensionY());
+        this.wellBuilding = new WellBuilding(this.scene, 200, this.getGroundDimensionY());
         this._buildingsAndItems.add(this.wellBuilding);
 
-        this.merchant = new Merchant(this.scene, 350, this.getGroundDimensionY());
+        this.merchant = new Merchant(this.scene, 500, this.getGroundDimensionY());
         this._buildingsAndItems.add(this.merchant);
 
-        /**
-         * @type {WellBuilding}
-         */
-        // this.bakeryBuilding = new BakeryBuilding(this.scene, 500, this.getGroundDimensionY());
-        // this._buildingsAndItems.add(this.bakeryBuilding);
-
-        // this.millBuilding = new MillBuilding(this.scene, 150, this.getGroundDimensionY());
-        // this._buildingsAndItems.add(this.millBuilding);
-
-        let crop = new HarvestedCrop(this.scene, 150, this.getGroundDimensionY() - 100);
-        this.items.add(crop);
-        crop = new HarvestedCrop(this.scene, 175, this.getGroundDimensionY() - 100);
-        this.items.add(crop);
-        crop = new HarvestedCrop(this.scene, 185, this.getGroundDimensionY() - 100);
-        this.items.add(crop);
+        let item = new Flour(this.scene, 500, 200);
+        this.items.add(item);
     }
 
     update () {

@@ -47,11 +47,6 @@ export default class MillBuilding extends Phaser.GameObjects.Container {
         this.healthbar.hide();
 
         /**
-         * @type {number}
-         */
-        this.loopPercent = 0;
-
-        /**
          * @type {string}
          * @private
          */
