@@ -1,4 +1,4 @@
-import Grain from 'entity/Grain';
+import Grain from 'entity/buildings/Grain';
 
 export default class BuildControler {
     /**

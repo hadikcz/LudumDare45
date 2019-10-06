@@ -51,6 +51,7 @@ export default class GameScene extends Phaser.Scene {
         this.gameControls = new GameControls(this);
 
         this.physics.add.collider(this.playerCharacter, this.gameEnvironment.groundGroup);
+        this.physics.add.collider(this.gameEnvironment.crops, this.gameEnvironment.groundGroup);
     }
 
     update () {

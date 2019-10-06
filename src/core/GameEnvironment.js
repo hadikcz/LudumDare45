@@ -1,10 +1,11 @@
 import Phaser from 'phaser';
 import GameConfig from 'GameConfig';
 import Depths from 'structs/Depths';
-import WellBuilding from 'entity/WellBuilding';
-import BakeryBuilding from 'entity/BakeryBuilding';
-import Grain from 'entity/Grain';
-import MillBuilding from 'entity/MillBuilding';
+import WellBuilding from 'entity/buildings/WellBuilding';
+import BakeryBuilding from 'entity/buildings/BakeryBuilding';
+import Grain from 'entity/buildings/Grain';
+import MillBuilding from 'entity/buildings/MillBuilding';
+import HarvestedCrop from 'entity/HarvestedCrop';
 
 export default class GameEnvironment {
     /**
@@ -60,6 +61,11 @@ export default class GameEnvironment {
          * @private
          */
         this._buildingsAndItems = this.scene.add.group();
+
+        /**
+         * @type {Phaser.GameObjects.Group}
+         */
+        this.crops = this.scene.add.group();
 
         this._createBgStatic();
         this._createGround();

@@ -157,27 +157,6 @@
 					}
 				},
 				{
-					"filename": "Crops",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 1024,
-						"h": 640
-					},
-					"spriteSourceSize": {
-						"x": 341,
-						"y": 544,
-						"w": 26,
-						"h": 14
-					},
-					"frame": {
-						"x": 282,
-						"y": 289,
-						"w": 26,
-						"h": 14
-					}
-				},
-				{
 					"filename": "flour",
 					"rotated": false,
 					"trimmed": false,
@@ -192,10 +171,31 @@
 						"h": 13
 					},
 					"frame": {
-						"x": 310,
+						"x": 282,
 						"y": 289,
 						"w": 22,
 						"h": 13
+					}
+				},
+				{
+					"filename": "Crops",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 12
+					},
+					"frame": {
+						"x": 306,
+						"y": 289,
+						"w": 24,
+						"h": 12
 					}
 				},
 				{
@@ -214,7 +214,7 @@
 					},
 					"frame": {
 						"x": 310,
-						"y": 304,
+						"y": 303,
 						"w": 32,
 						"h": 4
 					}
@@ -234,7 +234,7 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 334,
+						"x": 332,
 						"y": 289,
 						"w": 39,
 						"h": 11
@@ -393,6 +393,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:a4e1e6f137180004e759c5daaad712b2:f06fafab963aae90d9f8c120a43888f5:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:994d16c5f0b59d089e119bf10411d8ab:89addeb4348a937ad4ecf568ec05f285:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }

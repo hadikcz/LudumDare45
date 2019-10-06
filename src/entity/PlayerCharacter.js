@@ -52,6 +52,8 @@ export default class PlayerCharacter extends Phaser.GameObjects.Container {
         this.body.setBounce(0.2);
         this.body.setCollideWorldBounds(true);
 
+        this.body.setDragX(600);
+
         this.body.setSize(22, 52);
 
         this._overHeadText = this.scene.add.text(this.x, this.y, GameConfig.DefaultOverHeadText, { fontFamily: 'Verdana, Arial', fontSize: 45, color: '#FFFFFF' }); // '#FF0000'
