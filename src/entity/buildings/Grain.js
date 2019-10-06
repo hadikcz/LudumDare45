@@ -149,6 +149,11 @@ export default class Grain extends Phaser.GameObjects.Image {
 
     _interactWaterThePlant () {
         if (this.state !== BuildingsAndItemsStates.GRAIN.GROWED_WAITING_FOR_WATER) return;
+        if (!this.scene.playerCharacter.pickedItem || this.scene.playerCharacter.pickedItem.getName() !== 'Bucket') return;
+
+        let bucket = this.scene.playerCharacter.pickedItem;
+        this.scene.playerCharacter.putDown(true);
+        bucket.destroy();
 
         this.waterDropletImage.destroy();
         clearInterval(this.waterBeforeDieInterval);
@@ -219,7 +224,11 @@ export default class Grain extends Phaser.GameObjects.Image {
 
     getInteractText () {
         if (this.state === BuildingsAndItemsStates.GRAIN.GROWED_WAITING_FOR_WATER) {
-            return 'Water the plant';
+            if (this.scene.playerCharacter.pickedItem && this.scene.playerCharacter.pickedItem.getName() === 'Bucket') {
+                return 'Water the plant';
+            } else {
+                return 'Water the plant (Need bucket)';
+            }
         } else if (this.state === BuildingsAndItemsStates.GRAIN.GROWED) {
             return 'Harvest the plant';
         } else if (this.state === BuildingsAndItemsStates.GRAIN.DEAD) {
@@ -231,7 +240,8 @@ export default class Grain extends Phaser.GameObjects.Image {
     _die () {
         this.state = BuildingsAndItemsStates.GRAIN.DEAD;
         this.tint = 0xAAAAAA;
-        this.scytheImage.setAlpha(0);
+        this.scytheImage.destroy();
+        this.waterDropletImage.destroy();
     }
 
     destroy () {

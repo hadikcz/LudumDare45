@@ -1,4 +1,5 @@
 import Depths from 'structs/Depths';
+import Bucket from 'entity/items/Bucket';
 
 export default class WellBuilding extends Phaser.GameObjects.Image {
     constructor (scene, x, y) {
@@ -16,7 +17,10 @@ export default class WellBuilding extends Phaser.GameObjects.Image {
     }
 
     interact () {
-        console.log('interacting with ' + this._name);
+        if (this.scene.playerCharacter.pickedItem !== null) return;
+        let bucket = new Bucket(this.scene, this.x, this.y);
+        bucket.explode();
+        this.scene.gameEnvironment.items.add(bucket);
     }
 
     getInteractText () {

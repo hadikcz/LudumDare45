@@ -199,24 +199,24 @@
 					}
 				},
 				{
-					"filename": "Bucket",
+					"filename": "coin1",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 1024,
-						"h": 640
+						"w": 11,
+						"h": 11
 					},
 					"spriteSourceSize": {
-						"x": 495,
-						"y": 520,
-						"w": 9,
-						"h": 15
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 11
 					},
 					"frame": {
 						"x": 397,
 						"y": 126,
-						"w": 9,
-						"h": 15
+						"w": 11,
+						"h": 11
 					}
 				},
 				{
@@ -367,24 +367,24 @@
 					}
 				},
 				{
-					"filename": "waterDroplet",
+					"filename": "Bucket",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
 						"w": 14,
-						"h": 23
+						"h": 26
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
 						"w": 14,
-						"h": 23
+						"h": 26
 					},
 					"frame": {
 						"x": 442,
 						"y": 1,
 						"w": 14,
-						"h": 23
+						"h": 26
 					}
 				},
 				{
@@ -403,7 +403,7 @@
 					},
 					"frame": {
 						"x": 442,
-						"y": 26,
+						"y": 29,
 						"w": 24,
 						"h": 12
 					}
@@ -451,24 +451,24 @@
 					}
 				},
 				{
-					"filename": "coin1",
+					"filename": "waterDroplet",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 11,
-						"h": 11
+						"w": 14,
+						"h": 23
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 11,
-						"h": 11
+						"w": 14,
+						"h": 23
 					},
 					"frame": {
 						"x": 468,
 						"y": 22,
-						"w": 11,
-						"h": 11
+						"w": 14,
+						"h": 23
 					}
 				},
 				{
@@ -486,8 +486,8 @@
 						"h": 11
 					},
 					"frame": {
-						"x": 468,
-						"y": 35,
+						"x": 482,
+						"y": 7,
 						"w": 11,
 						"h": 11
 					}
@@ -508,7 +508,7 @@
 					},
 					"frame": {
 						"x": 442,
-						"y": 40,
+						"y": 43,
 						"w": 8,
 						"h": 11
 					}
@@ -540,6 +540,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:efff815518156c1d4eb845ef62f5eda3:1840e748149240e2e07f7d44bf4a6c2b:a759b6bbc8381ac9c472b28f589ad0d6$"
+		"smartupdate": "$TexturePacker:SmartUpdate:b8ba6b25d267c355d2ccd609bed203b6:6e6b10e20344a280bc0ae133945a4e48:a759b6bbc8381ac9c472b28f589ad0d6$"
 	}
 }
