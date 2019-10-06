@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "ARCADECLASSIC";
+    src: url('../fonts/ARCADECLASSIC.ttf') format("truetype");
+}
+html,
+body {
+    color: #ffe33e;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    image-rendering: optimizeSpeed;              /* Older versions of FF */
+    image-rendering: -moz-crisp-edges;           /* FF 6.0+ */
+    image-rendering: -webkit-optimize-contrast;  /* Webkit (non standard naming) */
+    image-rendering: -o-crisp-edges;             /* OS X & Windows Opera (12.02+) */
+    image-rendering: crisp-edges;                /* Possible future browsers. */
+    -ms-interpolation-mode: nearest-neighbor;    /* IE (non standard naming) */
+    image-rendering: pixelated;                  /* Chrome 41 */
+    font-family: 'ARCADECLASSIC', Arial;
+    background: #FFFFFF;
+}
+#content {
+    position: absolute;
+    z-index: 0;
+}
+
+#ui {
+    width: 1024px;
+    height: 640px;
+    position: absolute;
+    z-index: 10000;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.coins-wrapper {
+    top: 8px;
+    left: 8px;
+    z-index: 100;
+    position: absolute;
+}
+
+.coins-wrapper img {
+    display: inline-block;
+    zoom: 4;
+}
+
+.coins {
+    color: #ffe33e;
+    font-size: 55px;
+    display: inline-block;
+    margin-left: 5px;
+    transform: translateY(-5px);
+}
+
+.build-menu {
+    color: white;
+    background: #6f4a2b;
+    width: 100px;
+    height: 145px;
+    padding: 5px;
+    bottom: 127px;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.build-menu .title {
+    font-size: 19px;
+    color: #ffe33e;
+    text-align: center;
+}
+
+.build-menu .row {
+    width: 90%;
+    padding: 4px;
+    background: #2a1700;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.build-menu .row:nth-child(even) {
+    background: #3c2a00;
+}
+
+.build-menu .row .price {
+    float: right;
+    display: inline-block;
+}
+
+.build-menu .row.active {
+    background: #a7a7a7;
+}
+
+.build-menu .coin {
+    background: url('../ui/coin.png') no-repeat;
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+}
+
+
+.build-menu .note {
+    font-size: 17px;
+    color: #ffe33e;
+    border: 0;
+    text-align: center;
+}
+
+.build-menu .not-enough-coins {
+    color: red;
+    margin-top: 10px;
+    width: 192px;
+    transform: translateX(-21%);
+    font-size: 22px;
+}
