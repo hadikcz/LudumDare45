@@ -14,5 +14,6 @@ export default {
     BakeryLoop: 20000,
     MinimalInteractiveDistance: 75,
     MinimalInteractiveDistanceItem: 65,
+    MinimalInteractiveDistanceMerchant: 110,
     DefaultOverHeadText: 'Place/build'
 };

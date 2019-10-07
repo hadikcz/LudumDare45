@@ -57,6 +57,12 @@ export default class GameScene extends Phaser.Scene {
         this.physics.add.collider(this.playerCharacter, this.gameEnvironment.groundGroup);
         this.physics.add.collider(this.gameEnvironment.items, this.gameEnvironment.groundGroup);
 
+        this.physics.add.overlap(this.playerCharacter, this.gameEnvironment.items, (bodyA, bodyB) => {
+            if (bodyB.getName() === 'Coin' && bodyB.isTouchTheGroundYet) {
+                bodyB.interact();
+            }
+        });
+
         this.ui.show();
 
         this.updateCoins(Buildings.getBuildingById(1).price);

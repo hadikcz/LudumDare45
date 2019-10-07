@@ -76,7 +76,7 @@ export default class GameEnvironment {
         this._buildingsAndItems.add(this.wellBuilding);
 
         this.merchant = new Merchant(this.scene, 500, this.getGroundDimensionY());
-        this._buildingsAndItems.add(this.merchant);
+        // this._buildingsAndItems.add(this.merchant);
 
         // let item = new Flour(this.scene, 300, this.getGroundDimensionY() - 200);
         // this.items.add(item);
@@ -100,6 +100,10 @@ export default class GameEnvironment {
         if (!this.scene.playerCharacter.pickedItem) {
             let item = this._findNearestInteractiveItem(target);
             if (item) return item;
+        }
+        let distance = Phaser.Math.Distance.Between(this.merchant.x, this.merchant.y, target.x, target.y);
+        if (distance < GameConfig.MinimalInteractiveDistanceMerchant) {
+            return this.merchant;
         }
         return this._findNearestInteractiveItemBuilding(target);
     }

@@ -10,6 +10,18 @@ export default class HarvestedCrop extends AbstractItem {
          * @private
          */
         this._price = 1;
+
+        /**
+         * @type {boolean}
+         */
+        this.isTouchTheGroundYet = false;
+    }
+
+    preUpdate () {
+        super.preUpdate();
+        if (this.body.touching.down) {
+            this.isTouchTheGroundYet = true;
+        }
     }
 
     interact () {
