@@ -1,4 +1,4 @@
-## [PLAY ON WEB!](https://hadikcz.github.io/LudumDare45_Poor_farmer/build/)
+## [PLAY ON WEB!](https://hadikcz.github.io/LudumDare45_Poor_farmer/build/index.html)
 
 ![Image of game](https://raw.githubusercontent.com/hadikcz/LudumDare45/master/screens/1.png)
 

@@ -52,12 +52,7 @@ export default class Counter {
         this._value = start;
 
         if (regenerateDelay && regenerateCount && scene) {
-            this._regenerateTimer = scene.time.addEvent({
-                delay: regenerateDelay,
-                repeat: Infinity,
-                callbackScope: this,
-                callback: this._regenerateTick
-            });
+``
         }
     }
 
